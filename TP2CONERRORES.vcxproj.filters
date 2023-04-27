@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TP2 UML\Model\asistAutomatico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\Cajero.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\cliente.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\compra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\eLimpieza.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\eMostrador.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\empleado.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\eOrtopedia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\ePerfumeria.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\farmaceutico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\farmacia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\golosina.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\medicamento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\prodOrtopedia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\prodPerfYCosm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TP2 UML\Model\producto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TP2 UML\Model\asistAutomatico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\Cajero.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\cliente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\compra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\eLimpieza.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\eMostrador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\empleado.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\eOrtopedia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\ePerfumeria.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\farmaceutico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\farmacia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\golosina.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\medicamento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\MetDePago.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\necesidad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\prodOrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\prodOrtopedia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\prodPerfYCosm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\prodPYC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\producto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TP2 UML\Model\turno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
