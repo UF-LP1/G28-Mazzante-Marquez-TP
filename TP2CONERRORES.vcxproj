@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="TP2 UML\Model\asistAutomatico.cpp" />
     <ClCompile Include="TP2 UML\Model\Cajero.cpp" />
     <ClCompile Include="TP2 UML\Model\cliente.cpp" />

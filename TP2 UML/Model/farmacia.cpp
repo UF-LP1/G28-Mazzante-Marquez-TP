@@ -19,10 +19,9 @@
  * @param string
  * @param unsigned long int
  */
- farmacia::farmacia(string horarioSemana,string horarioFinDeSemana, string nombre, string direccion, string telContacto,string mail,unsigned long int fondos) {
+ farmacia::farmacia(string horarioSemana,string horarioFinDeSemana, string nombre, string direccion, string telContacto,string mail,unsigned long int fondos) :nombre(nombre) {
      this->horarioSemana = horarioSemana;
      this->horarioFinDeSemana = horarioFinDeSemana;
-     this->nombre = nombre;
      this->direccion = direccion;
      this->telContacto = telContacto;
      this->mail = mail;
