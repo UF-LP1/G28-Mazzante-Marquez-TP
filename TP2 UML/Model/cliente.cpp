@@ -31,7 +31,7 @@ cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obr
 }
 
 cliente::~cliente() {
-    delete[] listaCompras;
+    delete[] &listaCompras;
 }
 
 /**

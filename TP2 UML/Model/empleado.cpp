@@ -24,7 +24,7 @@ empleado::empleado(string nombre, string apellido, string DNI, string telContact
 }
 
 empleado::~empleado() {
-    delete [] listaClientes;
+    delete [] &listaClientes;
 }
 
 /**

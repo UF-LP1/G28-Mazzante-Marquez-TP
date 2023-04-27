@@ -19,7 +19,7 @@ compra::compra(double monto, MetDePago pago) {
 }
 
 compra::~compra() {
-    delete[] listaProductos;
+    delete[] &listaProductos;
 }
 
 /**

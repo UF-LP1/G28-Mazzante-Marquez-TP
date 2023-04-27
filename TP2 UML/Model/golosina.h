@@ -23,7 +23,7 @@ public:
  * @param string
  * @param time_t
  */
-golosina(double, unsigned int, string, time_t);
+golosina(double, unsigned int, string, string, time_t);
     
 ~golosina();
 

@@ -15,8 +15,8 @@
  * @param string
  * @param time_t
  */
-golosina::golosina(double precio, unsigned int codigoProd, string marca, time_t vencimiento)
-    : producto (precio, codigoProd, marca) {
+golosina::golosina(double precio, unsigned int stock, string codigoProd , string marca, time_t vencimiento)
+    : producto (precio, stock, codigoProd, marca) {
     this->vencimiento = vencimiento;
 }
 
