@@ -54,7 +54,7 @@ double cajero::cobrar(queue<cliente>listaClientes) {
 
    precioTotal = compraAux->get_monto();
 
-
+   
 
 
 
