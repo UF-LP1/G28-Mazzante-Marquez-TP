@@ -10,9 +10,10 @@
  */
 
 //Método constructor
-prodPerfYCosm::prodPerfYCosm(double precio, unsigned int stock, string codigoProd, string marca, prodPYC tipoProd) 
-    : producto (precio, stock, codigoProd, marca) {
-    this->tipoProducto = tipoProducto;
+prodPerfYCosm::prodPerfYCosm(double precio, unsigned int stock, string codigoProd, string marca, prodPYC tipoProd)
+    : producto(precio, stock, codigoProd, marca) {
+    this->tipoProducto = tipoProd;
+
 }
 
 //Método destructor

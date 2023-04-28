@@ -16,7 +16,7 @@ public:
 /**
  * @param prodPYC
  */
-prodPerfYCosm(double, unsigned int, string, string, prodPYC);
+prodPerfYCosm(double precio, unsigned int stock, string codigoProd, string marca, prodPYC tipoProd);
     
 ~prodPerfYCosm();
 

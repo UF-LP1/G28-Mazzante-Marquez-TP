@@ -13,11 +13,17 @@
 /**
  * @param double
  */
-compra::compra(double monto, MetDePago pago, vector<producto> listaProductos) {
+compra::compra(MetDePago pago, vector <producto> listaProductos, double monto = 0) {
     this->monto = monto;
     this->pago = pago;
-    this->listaProductos = listaProductos;
+    this->listaProductos = vector<producto>(listaProductos.begin(), listaProductos.end());
 }
+
+compra::compra() {
+    this->pago = efectivo;
+    this->monto = 0,0;
+}
+
 
 //Método destructor
 compra::~compra() {

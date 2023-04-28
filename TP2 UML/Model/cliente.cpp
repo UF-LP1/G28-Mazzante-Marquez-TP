@@ -21,7 +21,7 @@
  * @param int
  * @param MetDePago
  */
-cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, int num, compra * co = nullptr) 
+cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, int num, compra * co) 
     :nombre(nombre), apellido(apellido), DNI(DNI), num(num){
     this->TipoNecesidad= n;
     this->obraSocial = obraSocial;
@@ -86,7 +86,10 @@ void cliente::pagar() {
  * @return void
  */
 void cliente::seleccionar_producto(producto c) {
-    return;
+    if (carrito == nullptr) {
+        carrito = new compra();
+    }
+    carrito->agregar_producto(c);
 }
 
 /**

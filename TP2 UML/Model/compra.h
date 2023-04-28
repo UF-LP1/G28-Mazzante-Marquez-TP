@@ -16,7 +16,9 @@ public:
 /**
  * @param double
  */
-compra(double, MetDePago, vector<producto>);
+compra(MetDePago, vector<producto>, double);
+
+compra();
 
 ~compra();
     
@@ -44,7 +46,7 @@ vector<producto> get_productos();
 private: 
     double monto;
     MetDePago pago;
-    vector<producto> listaProductos;
+    vector <producto> listaProductos;
 };
 
 #endif //_COMPRA_H

@@ -15,17 +15,17 @@ int main() {
 	
 	cliente cliente1(PAMI, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", 13, nullptr);
 
-	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champú);
+	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 
-	queue<cliente> listaClientes;
+	queue <cliente> listaClientes;
 
 	listaClientes.push(cliente1);
 
-	listaClientes.front();
+
 
 	cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
 
-	cajerocobro.cobrar(&cliente1);
+	//cajerocobro.cobrar(&listaClientes.front());
 
 
 
