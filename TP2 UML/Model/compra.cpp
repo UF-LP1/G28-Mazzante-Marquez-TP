@@ -59,3 +59,7 @@ void compra::agregar_producto(producto p) {
 void compra::eliminar_producto(producto p) {
     return;
 }
+vector<producto> compra::get_productos() {
+
+    return this->listaProductos;
+}
