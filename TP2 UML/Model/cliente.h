@@ -5,7 +5,7 @@
 
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
-#include <string>
+
 #include "necesidad.h"
 #include "asistAutomatico.h"
 #include "cajero.h"

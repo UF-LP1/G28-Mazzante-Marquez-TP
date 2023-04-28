@@ -9,7 +9,7 @@
  * farmaceutico implementation
  */
 
-
+//Método constructor
 /**
  * @param string
  * @param string
@@ -19,9 +19,10 @@
  */
 farmaceutico::farmaceutico(string nombre, string apellido, string DNI, string telContacto, unsigned int sueldo, string numMatricula) 
     :empleado(nombre, apellido, DNI, telContacto, sueldo), numMatricula(numMatricula) {
-    
+
 }
 
+//Método destructor
 farmaceutico::~farmaceutico() {
 
 }

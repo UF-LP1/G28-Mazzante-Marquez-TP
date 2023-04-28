@@ -10,7 +10,7 @@
  * ePerfumeria implementation
  */
 
-
+//Método constructor
 /**
  * @param string
  * @param string
@@ -23,6 +23,7 @@
 
 }
 
+ //Método destructor
  ePerfumeria:: ~ePerfumeria() {
  }
 

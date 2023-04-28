@@ -6,7 +6,6 @@
 #ifndef _EORTOPEDIA_H
 #define _EORTOPEDIA_H
 
-#include <string>
 #include "empleado.h"
 
 using namespace::std;

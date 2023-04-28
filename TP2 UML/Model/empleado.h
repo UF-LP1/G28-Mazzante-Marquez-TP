@@ -6,11 +6,11 @@
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H
 
-#include <string>
 #include <list>
 #include "cliente.h"
 
-using namespace::std;
+using namespace std;
+
 class empleado {
 public: 
     
@@ -46,7 +46,6 @@ protected:
     unsigned int sueldo;
 
     list<cliente> listaClientes;
-    
 };
 
 #endif //_EMPLEADO_H

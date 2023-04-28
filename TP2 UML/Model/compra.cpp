@@ -9,7 +9,7 @@
  * compra implementation
  */
 
-
+//Método constructor
 /**
  * @param double
  */
@@ -18,6 +18,7 @@ compra::compra(double monto, MetDePago pago) {
     this->pago = pago;
 }
 
+//Método destructor
 compra::~compra() {
     delete[] &listaProductos;
 }

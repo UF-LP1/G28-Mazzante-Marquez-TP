@@ -6,6 +6,7 @@
 #define _ASISTAUTOMATICO_H
 
 #include <string>
+using namespace std;
 
 class asistAutomatico {
 public: 

@@ -10,6 +10,7 @@
  */
 
 
+//Método constructor
 /**
  * @param string
  * @param string
@@ -23,6 +24,7 @@ cajero::cajero(string nombre, string apellido, string DNI, string telContacto, u
 
 }
 
+//Método destructor
 cajero::~cajero() {
 
 }

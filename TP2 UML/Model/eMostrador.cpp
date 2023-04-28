@@ -9,7 +9,7 @@
  * eMostrador implementation
  */
 
-
+//Método constructor
 /**
  * @param string
  * @param string
@@ -22,11 +22,10 @@
 
 }
 
+ //Método destructor
  eMostrador::~eMostrador(){
 
  }
-
-
 
 /**
  * @param cliente c

@@ -9,7 +9,7 @@
  * farmacia implementation
  */
 
-
+//Método constructor
 /**
  * @param string
  * @param string
@@ -19,7 +19,8 @@
  * @param string
  * @param unsigned long int
  */
- farmacia::farmacia(string horarioSemana,string horarioFinDeSemana, string nombre, string direccion, string telContacto,string mail,unsigned long int fondos) :nombre(nombre) {
+ farmacia::farmacia(string horarioSemana,string horarioFinDeSemana, string nombre, string direccion, string telContacto,string mail,unsigned long int fondos) 
+     :nombre(nombre) {
      this->horarioSemana = horarioSemana;
      this->horarioFinDeSemana = horarioFinDeSemana;
      this->direccion = direccion;
@@ -28,22 +29,9 @@
      this->fondos = fondos;
 }
 
+ //Método destructor
  farmacia:: ~farmacia() {
 
-}
-
-/**
- * @return void
- */
-void farmacia::abrir() {
-    return;
-}
-
-/**
- * @return void
- */
-void farmacia::cerrar() {
-    return;
 }
 
 /**
@@ -72,16 +60,30 @@ void farmacia::set_horarioSemana(string h) {
 }
 
 /**
- * @return void
- */
-void farmacia::adquirirFondos() {
-    return;
-}
-
-/**
  * @param compra co
  * @return void
  */
 void farmacia::agregar_compra(compra co) {
+    return;
+}
+
+/**
+ * @return void
+ */
+void farmacia::abrir() {
+    return;
+}
+
+/**
+ * @return void
+ */
+void farmacia::cerrar() {
+    return;
+}
+
+/**
+ * @return void
+ */
+void farmacia::adquirirFondos() {
     return;
 }

@@ -8,7 +8,7 @@
  * eOrtopedia implementation
  */
 
-using namespace::std;
+//Método constructor
 /**
  * @param string
  * @param string
@@ -22,6 +22,7 @@ using namespace::std;
 
 }
 
+ //Método destructor
  eOrtopedia::~eOrtopedia() {
 
  }

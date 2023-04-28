@@ -9,7 +9,7 @@
  * cliente implementation
  */
 
-
+//Metodo constructor
 /**
  * @param necesidad
  * @param string
@@ -30,6 +30,7 @@ cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obr
     
 }
 
+//Método destructor
 cliente::~cliente() {
     delete[] &listaCompras;
 }

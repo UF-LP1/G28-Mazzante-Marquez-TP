@@ -5,9 +5,9 @@
 
 #ifndef _FARMACIA_H
 #define _FARMACIA_H
-#include <string>
+
 #include "compra.h"
-using namespace::std;
+using namespace std;
 
 class farmacia {
 public: 

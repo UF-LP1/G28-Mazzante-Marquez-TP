@@ -9,7 +9,7 @@
  * empleado implementation
  */
 
-
+//Método constructor
 /**
  * @param string
  * @param string
@@ -23,6 +23,7 @@ empleado::empleado(string nombre, string apellido, string DNI, string telContact
     this->sueldo = sueldo;
 }
 
+//Método destructor
 empleado::~empleado() {
     delete [] &listaClientes;
 }

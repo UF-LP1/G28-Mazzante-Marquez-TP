@@ -7,7 +7,6 @@
 #define _COMPRA_H
 
 #include "MetDePago.h"
-#include <string>
 #include "producto.h"
 #include <forward_list>
 

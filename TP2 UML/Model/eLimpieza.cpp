@@ -9,7 +9,7 @@
  * eLimpieza implementation
  */
 
-
+//Método constructor
 /**
  * @param turno
  * @param string
@@ -23,6 +23,7 @@ eLimpieza::eLimpieza(string nombre, string apellido, string DNI, string telConta
     this->turnoTrabajo = t;
 }
 
+//Método destructor
 eLimpieza::~eLimpieza() {
 
 }
