@@ -10,9 +10,7 @@
 
 using namespace std;
 
-int main() {
-	
-	
+int main() {	
 	cliente cliente1(PAMI, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", 13, nullptr);
 
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
