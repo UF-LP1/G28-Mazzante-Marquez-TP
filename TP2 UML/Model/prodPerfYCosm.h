@@ -9,7 +9,6 @@
 #include "producto.h"
 #include "prodPYC.h"
 
-
 class prodPerfYCosm: public producto {
 public: 
     prodPYC tipoProducto;
@@ -19,9 +18,9 @@ public:
  */
 prodPerfYCosm(double, unsigned int, string, string, prodPYC);
     
-prodPYC get_tipoProducto();
-
 ~prodPerfYCosm();
+
+prodPYC get_tipoProducto();
 };
 
 #endif //_PRODPERFYCOSM_H

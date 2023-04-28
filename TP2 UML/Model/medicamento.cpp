@@ -9,7 +9,7 @@
  * medicamento implementation
  */
 
-
+//Método constructor
 /**
  * @param string
  * @param time_t
@@ -20,6 +20,7 @@ medicamento::medicamento(double precio, unsigned int stock, string codigoProd, s
     this->vencimiento = vencimiento;
 }
 
+//Método destructor
 medicamento::~medicamento() {
 
 }

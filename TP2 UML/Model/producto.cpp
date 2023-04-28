@@ -9,7 +9,7 @@
  * producto implementation
  */
 
-
+//Método constructor
 /**
  * @param double
  * @param unsigned int
@@ -22,6 +22,7 @@ producto::producto(double precio, unsigned int stock, string codigoProd, string 
     this->codigoProd = codigoProd;
 }
 
+//Método destructor
 producto::~producto() {
 
 }
@@ -52,5 +53,5 @@ unsigned int producto::get_stock() {
  * @return string
  */
 string producto::get_codigoProd() {
-    return codigoProd;
+    return this->codigoProd;
 }

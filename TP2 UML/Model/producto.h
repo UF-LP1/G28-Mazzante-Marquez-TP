@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 
 #ifndef _PRODUCTO_H
 #define _PRODUCTO_H

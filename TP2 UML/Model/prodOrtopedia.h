@@ -8,8 +8,6 @@
 
 #include "producto.h"
 #include "prodOrt.h"
-using namespace std;
-
 
 class prodOrtopedia: public producto {
 public: 

@@ -7,8 +7,6 @@
 #define _MEDICAMENTO_H
 
 #include "producto.h"
-#include <string>
-#include <ctime>
 
 using namespace::std;
 
