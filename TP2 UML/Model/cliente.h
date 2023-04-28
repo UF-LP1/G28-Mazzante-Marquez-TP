@@ -30,7 +30,7 @@ public:
  * @param int
  * @param MetDePago
  */
-cliente(necesidad, string, string, string, bool, string, string, int);
+cliente(necesidad, string, string, string, bool, string, string, int, compra*);
 
 ~cliente();
     
@@ -41,10 +41,7 @@ necesidad get_TipoNecesidad();
  */
 void set_TipoNecesidad(necesidad n);
     
-bool get_obraSocial();
-
-forward_list <compra> get_listaCompras(); //hago este método xq la lista de compras es un atributo privado
-    
+bool get_obraSocial();  
     
 /**
  * @param cajero c
@@ -74,7 +71,7 @@ private:
     string telContacto;
     string mail;
 
-    forward_list <compra> listaCompras;
+    compra *carrito;
 };
 
 #endif //_CLIENTE_H

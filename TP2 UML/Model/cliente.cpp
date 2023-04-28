@@ -21,18 +21,18 @@
  * @param int
  * @param MetDePago
  */
-cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, int num) 
+cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, int num, compra * co = nullptr) 
     :nombre(nombre), apellido(apellido), DNI(DNI), num(num){
     this->TipoNecesidad= n;
     this->obraSocial = obraSocial;
     this->telContacto = telContacto;
     this->mail = mail;
-    
+    carrito = co;
 }
 
 //Método destructor
 cliente::~cliente() {
-    delete[] &listaCompras;
+    delete[] carrito;
 }
 
 /**
@@ -56,11 +56,6 @@ void cliente::set_TipoNecesidad(necesidad n) {
  */
 bool cliente::get_obraSocial() {
     return this->obraSocial;
-}
-
-forward_list<compra> cliente::get_listaCompras()
-{
-    return this-> forward_list<compra>();
 }
 
 /**
