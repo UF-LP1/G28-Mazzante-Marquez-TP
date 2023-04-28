@@ -1,8 +1,3 @@
-/**
- * Project Untitled
- */
-
-
 #include "compra.h"
 
 /**
@@ -23,7 +18,6 @@ compra::compra() {
     this->pago = efectivo;
     this->monto = 0,0;
 }
-
 
 //Método destructor
 compra::~compra() {
@@ -65,6 +59,7 @@ void compra::agregar_producto(producto p) {
 void compra::eliminar_producto(producto p) {
     return;
 }
+
 vector<producto> compra::get_productos() {
 
     return this->listaProductos;

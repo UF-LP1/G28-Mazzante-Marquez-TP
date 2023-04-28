@@ -66,6 +66,16 @@ void cliente::recibir_factura() {
     return;
 }
 
+string cliente::get_nombre()
+{
+    return this->nombre;
+}
+
+string cliente::get_DNI()
+{
+    return this->DNI;
+}
+
 /**
  * @param cajero c
  * @return void

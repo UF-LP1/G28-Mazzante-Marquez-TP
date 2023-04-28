@@ -21,14 +21,14 @@ int main() {
 
 	listaClientes.push(cliente1);
 
-
-
 	cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
 
-	//cajerocobro.cobrar(&listaClientes.front());
+	double montoCompra;
 
+	montoCompra = cajerocobro.cobrar(&listaClientes.front());
 
-
+	if (montoCompra != 0.0)	//chequeo que haya salido todo bien 
+		cajerocobro.imprimir_factura(listaClientes.front(),montoCompra);
 
 	return 0;
 }

@@ -20,6 +20,8 @@ public:
  ~cajero();
 
 double cobrar(cliente *c);
+
+void imprimir_factura(cliente clienteAux, double precioTotal);
     
 void entregarCompraYBolsa();
 

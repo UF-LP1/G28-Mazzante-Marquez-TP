@@ -39,6 +39,10 @@ bool get_obraSocial();
  * @param cajero c
  */
 void recibir_factura() ;
+
+string get_nombre();
+
+string get_DNI();
     
 /**
  * @param cajero c
