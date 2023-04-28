@@ -20,7 +20,7 @@ public:
  ~cajero();
     
 
-compra* cobrar();
+double cobrar(queue<cliente>listaClientes);
     
 void entregarCompraYBolsa();
 

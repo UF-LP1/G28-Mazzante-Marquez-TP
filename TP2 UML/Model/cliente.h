@@ -63,7 +63,7 @@ private:
     string telContacto;
     string mail;
 
-    compra *carrito;
+    compra *carrito; //lo ponemos como *compra porque ppuede tener o 1 o 0 compras.
 };
 
 #endif //_CLIENTE_H
