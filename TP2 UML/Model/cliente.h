@@ -10,6 +10,7 @@
 #include "asistAutomatico.h"
 #include "cajero.h"
 #include "producto.h"
+#include "compra.h"
 #include <forward_list>
 
 using namespace std;
