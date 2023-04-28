@@ -18,11 +18,12 @@ public:
  cajero(string,string, string, string, unsigned int);
 
  ~cajero();
-    
+  
 
-double cobrar(queue<cliente>listaClientes);
+double cobrar(cliente *c);
     
 void entregarCompraYBolsa();
+
 
 };
 

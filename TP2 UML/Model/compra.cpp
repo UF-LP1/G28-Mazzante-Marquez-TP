@@ -39,6 +39,11 @@ double compra::get_monto() {
     return this->monto;
 }
 
+MetDePago compra::get_pago()
+{
+    return this->pago;
+}
+
 /**
  * @param producto p
  * @return void

@@ -26,6 +26,8 @@ compra(double, MetDePago, vector<producto>);
 void set_monto(double d);
     
 double get_monto();
+
+MetDePago get_pago();
     
 /**
  * @param producto p
