@@ -7,7 +7,6 @@
 #define _FARMACIA_H
 
 #include "compra.h"
-using namespace std;
 
 class farmacia {
 public: 

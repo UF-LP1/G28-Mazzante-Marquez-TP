@@ -62,7 +62,7 @@ bool cliente::get_obraSocial() {
  * @param cajero c
  * @return void
  */
-void cliente::recibir_factura(cajero c) {
+void cliente::recibir_factura() {
     return;
 }
 
@@ -70,7 +70,7 @@ void cliente::recibir_factura(cajero c) {
  * @param cajero c
  * @return void
  */
-void cliente::recibir_bolsaYCompra(cajero c) {
+void cliente::recibir_bolsaYCompra() {
     return;
 }
 

@@ -8,7 +8,6 @@
 
 #include "producto.h"
 
-
 class golosina: public producto {
 public: 
     time_t vencimiento;

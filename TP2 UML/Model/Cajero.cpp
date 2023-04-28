@@ -33,8 +33,8 @@ cajero::~cajero() {
  * @param cliente c
  * @return compra
  */
-compra cajero::cobrar() {
-    return ;
+compra* cajero::cobrar() {
+    return nullptr;
 }
 
 /**

@@ -7,8 +7,6 @@
 #define _EMOSTRADOR_H
 
 #include "empleado.h"
-#include "cliente.h"
-
 
 class eMostrador: public empleado {
 public: 

@@ -7,13 +7,8 @@
 #define _CLIENTE_H
 
 #include "necesidad.h"
-#include "asistAutomatico.h"
-#include "cajero.h"
-#include "producto.h"
 #include "compra.h"
-#include <forward_list>
-
-using namespace std;
+#include "asistAutomatico.h"
 
 class cliente {
 public: 
@@ -46,12 +41,12 @@ bool get_obraSocial();
 /**
  * @param cajero c
  */
-void recibir_factura(cajero c) ;
+void recibir_factura() ;
     
 /**
  * @param cajero c
  */
-void recibir_bolsaYCompra(cajero c) ;
+void recibir_bolsaYCompra() ;
     
 void pagar();
     

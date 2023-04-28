@@ -8,8 +8,6 @@
 
 #include "producto.h"
 
-using namespace::std;
-
 class medicamento : public producto {
 public:
     const string nombre;

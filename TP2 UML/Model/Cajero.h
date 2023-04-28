@@ -7,7 +7,6 @@
 #define _CAJERO_H
 
 #include "empleado.h"
-#include "compra.h"
 
 class cajero: public empleado {
 public: 
@@ -23,10 +22,8 @@ public:
 
  ~cajero();
     
-/**
- * @param cliente c
- */
-compra cobrar();
+
+compra* cobrar();
     
 void entregarCompraYBolsa();
 

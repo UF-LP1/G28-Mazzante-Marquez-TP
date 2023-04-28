@@ -20,7 +20,7 @@ compra::compra(double monto, MetDePago pago) {
 
 //Método destructor
 compra::~compra() {
-    delete[] &listaProductos;
+    
 }
 
 /**
@@ -36,11 +36,6 @@ void compra::set_monto(double monto) {
  */
 double compra::get_monto() {
     return this->monto;
-}
-
-forward_list<producto> compra::get_listaProductos()
-{
-    return this->forward_list<producto>();
 }
 
 /**

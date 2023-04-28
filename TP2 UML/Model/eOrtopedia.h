@@ -8,8 +8,6 @@
 
 #include "empleado.h"
 
-using namespace::std;
-
 class eOrtopedia: public empleado {
 public: 
     

@@ -7,7 +7,6 @@
 #define _FARMACEUTICO_H
 
 #include "empleado.h"
-#include "cliente.h"
 
 class farmaceutico: public empleado {
 public: 

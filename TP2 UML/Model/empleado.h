@@ -6,10 +6,7 @@
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H
 
-#include <list>
 #include "cliente.h"
-
-using namespace std;
 
 class empleado {
 public: 

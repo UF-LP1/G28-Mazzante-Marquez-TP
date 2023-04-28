@@ -2,13 +2,13 @@
 * header file class producto
  */
 
-#include <iostream>
-#include <string>
-#include <ctime>
 
 #ifndef _PRODUCTO_H
 #define _PRODUCTO_H
 
+#include <string>
+#include <ctime>
+#include <iostream>
 
 using namespace std;
 
