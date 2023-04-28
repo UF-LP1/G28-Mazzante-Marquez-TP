@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _FARMACIA_H
 #define _FARMACIA_H

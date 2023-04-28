@@ -1,6 +1,3 @@
-/**
- * Project Untitled
- */
 
 
 #ifndef _CAJERO_H

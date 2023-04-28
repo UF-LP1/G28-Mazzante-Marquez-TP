@@ -1,6 +1,3 @@
-/*
-* header file class asistAutomatico
- */
 
 #ifndef _ASISTAUTOMATICO_H
 #define _ASISTAUTOMATICO_H

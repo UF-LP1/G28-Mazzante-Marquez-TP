@@ -1,6 +1,3 @@
-/**
- * Project Untitled
- */
 
 
 #ifndef _CLIENTE_H
