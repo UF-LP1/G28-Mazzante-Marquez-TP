@@ -37,6 +37,8 @@ void agregar_producto(producto p);
  */
 void eliminar_producto(producto p);
 
+vector<producto> get_productos();
+
 private: 
     double monto;
     MetDePago pago;
