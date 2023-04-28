@@ -49,12 +49,12 @@ forward_list <compra> get_listaCompras(); //hago este método xq la lista de comp
 /**
  * @param cajero c
  */
-void recibir_factura(cajero c);
+void recibir_factura(cajero c) ;
     
 /**
  * @param cajero c
  */
-void recibir_bolsaYCompra(cajero c);
+void recibir_bolsaYCompra(cajero c) ;
     
 void pagar();
     

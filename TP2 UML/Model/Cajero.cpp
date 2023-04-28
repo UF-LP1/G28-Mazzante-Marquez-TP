@@ -34,7 +34,7 @@ cajero::~cajero() {
  * @return compra
  */
 compra cajero::cobrar() {
-    return;
+    return ;
 }
 
 /**

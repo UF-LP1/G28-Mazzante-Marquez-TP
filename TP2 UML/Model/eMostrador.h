@@ -33,7 +33,7 @@ void expenderRecetas();
     
 double aplicarDescuento();
     
-cliente cargarPago();
+void cargarPago();
 
 };
 

@@ -52,6 +52,6 @@ double eMostrador::aplicarDescuento() {
 /**
  * @return cliente
  */
-cliente eMostrador::cargarPago() {
+void eMostrador::cargarPago() {
     return;
 }

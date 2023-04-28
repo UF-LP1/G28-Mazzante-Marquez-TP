@@ -34,7 +34,7 @@ void recomendarRem();
  */
 void llamarCliente(cliente c);
     
-cliente cargarPrecio();
+void cargarPrecio();
 
 private: 
     const string numMatricula;

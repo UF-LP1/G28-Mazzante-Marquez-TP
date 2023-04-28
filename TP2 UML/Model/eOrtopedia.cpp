@@ -45,6 +45,6 @@ void eOrtopedia::llamarCliente(cliente c) {
 /**
  * @return cliente
  */
-cliente eOrtopedia::cargarPrecio() {
+void eOrtopedia::cargarPrecio() {
     return;
 }
