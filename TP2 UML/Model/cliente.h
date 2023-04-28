@@ -52,7 +52,7 @@ void pagar();
  */
 void seleccionar_producto(producto c);
     
-void ver_carrito();
+compra* get_carrito();
 
 private: 
     necesidad TipoNecesidad;

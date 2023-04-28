@@ -92,7 +92,8 @@ void cliente::seleccionar_producto(producto c) {
 /**
  * @return void
  */
-void cliente::ver_carrito() {
-    return;
+compra* cliente::get_carrito() {
+
+    return this->carrito;
 }
 
