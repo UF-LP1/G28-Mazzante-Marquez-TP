@@ -13,9 +13,10 @@
 /**
  * @param double
  */
-compra::compra(double monto, MetDePago pago) {
+compra::compra(double monto, MetDePago pago, vector<producto> listaProductos) {
     this->monto = monto;
     this->pago = pago;
+    this->listaProductos = listaProductos;
 }
 
 //Método destructor

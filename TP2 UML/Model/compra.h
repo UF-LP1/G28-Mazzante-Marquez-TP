@@ -16,7 +16,7 @@ public:
 /**
  * @param double
  */
-compra(double, MetDePago);
+compra(double, MetDePago, vector<producto>);
 
 ~compra();
     
@@ -40,6 +40,7 @@ void eliminar_producto(producto p);
 private: 
     double monto;
     MetDePago pago;
+    vector<producto> listaProductos;
 };
 
 #endif //_COMPRA_H
