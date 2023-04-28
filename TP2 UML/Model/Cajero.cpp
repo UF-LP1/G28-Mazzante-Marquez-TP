@@ -33,7 +33,7 @@ cajero::~cajero() {
  * @param queue<cliente>listaClientes
  * @return double
  */
-double cajero::cobrar(cliente* clienteAux) {
+double cajero::cobrar(cliente *clienteAux) {
 
    compra* compraAux = nullptr; //me creo un puntero de tipo compra y lo inicializo en null
    compraAux = clienteAux->get_carrito(); //me copio la dirección del carrito del cliente en mi compraAux

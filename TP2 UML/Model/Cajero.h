@@ -18,7 +18,6 @@ public:
  cajero(string,string, string, string, unsigned int);
 
  ~cajero();
-  
 
 double cobrar(cliente *c);
     
