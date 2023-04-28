@@ -7,7 +7,6 @@
 #define _CAJERO_H
 
 #include "empleado.h"
-#include "cliente.h"
 #include "compra.h"
 
 class cajero: public empleado {

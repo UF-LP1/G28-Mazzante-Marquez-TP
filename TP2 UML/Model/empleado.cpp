@@ -25,7 +25,7 @@ empleado::empleado(string nombre, string apellido, string DNI, string telContact
 
 //Método destructor
 empleado::~empleado() {
-    delete [] &listaClientes;
+
 }
 
 /**
@@ -40,11 +40,6 @@ string empleado::get_DNI() {
  */
 unsigned int empleado::get_sueldo() {
     return this->sueldo;
-}
-
-list<cliente> empleado::get_listaClientes()
-{
-    return this->list<cliente>();
 }
 
 /**

@@ -29,8 +29,6 @@ string get_DNI();
     
 unsigned int get_sueldo();
 
-list<cliente> get_listaClientes();
-
     
 /**
  * @param unsigned int
@@ -45,7 +43,6 @@ protected:
     string telContacto;
     unsigned int sueldo;
 
-    list<cliente> listaClientes;
 };
 
 #endif //_EMPLEADO_H
