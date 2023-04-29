@@ -28,7 +28,8 @@ cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obr
 
 //Método destructor
 cliente::~cliente() {
-    delete[] carrito;
+    carrito = nullptr;
+    delete [] this->carrito;
 }
 
 /**
