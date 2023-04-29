@@ -15,7 +15,9 @@ int main() {
 
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 
-	compra compra1();
+	compra compra1;
+
+	compra1.~compra();
 
 	cliente1.seleccionar_producto(shampoo);
 
