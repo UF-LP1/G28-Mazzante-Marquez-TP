@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _TURNO_H
 #define _TURNO_H

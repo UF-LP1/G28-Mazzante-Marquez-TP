@@ -1,7 +1,3 @@
-/**
- header file class golosina
- */
-
 
 #ifndef _GOLOSINA_H
 #define _GOLOSINA_H

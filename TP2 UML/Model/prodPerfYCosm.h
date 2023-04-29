@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _PRODPERFYCOSM_H
 #define _PRODPERFYCOSM_H

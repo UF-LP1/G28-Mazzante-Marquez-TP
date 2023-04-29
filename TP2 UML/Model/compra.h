@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _COMPRA_H
 #define _COMPRA_H

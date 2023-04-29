@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _EORTOPEDIA_H
 #define _EORTOPEDIA_H

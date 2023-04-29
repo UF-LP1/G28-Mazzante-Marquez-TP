@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _NECESIDAD_H
 #define _NECESIDAD_H

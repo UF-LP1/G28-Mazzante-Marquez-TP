@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _EMOSTRADOR_H
 #define _EMOSTRADOR_H

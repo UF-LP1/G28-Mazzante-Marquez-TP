@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _ELIMPIEZA_H
 #define _ELIMPIEZA_H

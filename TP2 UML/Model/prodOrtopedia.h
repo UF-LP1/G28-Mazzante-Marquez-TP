@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _PRODORTOPEDIA_H
 #define _PRODORTOPEDIA_H

@@ -1,7 +1,3 @@
-/*
-* header file class producto
- */
-
 
 #ifndef _PRODUCTO_H
 #define _PRODUCTO_H

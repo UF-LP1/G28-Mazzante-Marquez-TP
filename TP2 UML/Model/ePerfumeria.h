@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _EPERFUMERIA_H
 #define _EPERFUMERIA_H

@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H

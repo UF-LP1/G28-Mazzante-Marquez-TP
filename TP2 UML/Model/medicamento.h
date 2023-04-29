@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _MEDICAMENTO_H
 #define _MEDICAMENTO_H

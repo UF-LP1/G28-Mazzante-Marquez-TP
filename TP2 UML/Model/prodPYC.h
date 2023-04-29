@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _PRODPYC_H
 #define _PRODPYC_H

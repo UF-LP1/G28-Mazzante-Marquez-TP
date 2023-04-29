@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _METDEPAGO_H
 #define _METDEPAGO_H
