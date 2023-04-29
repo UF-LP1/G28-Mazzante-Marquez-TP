@@ -56,6 +56,8 @@ void compra::agregar_producto(producto p) {
 
     listaProductos.push_back(p);
 
+    monto += p.precio;
+
     return;
 }
 

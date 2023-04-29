@@ -41,7 +41,9 @@ double cajero::cobrar(cliente *clienteAux) {
 
    MetDePago formaDePago = compraAux1->get_pago();
 
-   delete[] compraAux1;
+   delete compraAux1;
+
+   compraAux1 = nullptr;
 
    return precioTotal;
 }
@@ -53,7 +55,9 @@ void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
     cout << "DNI cliente: " << clienteAux.get_DNI() << endl << "Nombre cliente: " << clienteAux.get_nombre()
         << endl << "Método de pago: " << compraAux2->get_pago() << endl << "Monto: $" << precioTotal;
 
-    delete[] compraAux2;
+    delete compraAux2;
+
+    compraAux2 = nullptr;
 
     return;
 }
