@@ -49,7 +49,7 @@ void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
     compra* compraAux2 = clienteAux.get_carrito(); //no chequeo que sea nullptr porque ya chequeo que exista la compra en el main
 
     cout << "DNI cliente: " << clienteAux.get_DNI() << endl << "Nombre cliente: " << clienteAux.get_nombre()
-        << endl << "Metodo de pago (0 efectivo, 1: tarjeta de credito, 2: tarjeta de debito, 3: App de celular) : " << compraAux2->get_pago() << endl << "Monto: $" << precioTotal;
+        << endl << "Metodo de pago (0: efectivo, 1: tarjeta de credito, 2: tarjeta de debito, 3: App de celular) : " << compraAux2->get_pago() << endl << "Monto: $" << precioTotal;
 
     return;
 }
