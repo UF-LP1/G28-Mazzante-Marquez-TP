@@ -17,8 +17,6 @@ int main() {
 
 	compra compra1;
 
-	compra1.~compra();
-
 	cliente1.seleccionar_producto(shampoo);
 
 	queue <cliente> listaClientes;
