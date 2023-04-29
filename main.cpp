@@ -15,6 +15,10 @@ int main() {
 
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 
+	compra compra1();
+
+	cliente1.seleccionar_producto(shampoo);
+
 	queue <cliente> listaClientes;
 
 	listaClientes.push(cliente1);
