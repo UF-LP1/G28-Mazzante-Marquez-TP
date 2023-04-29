@@ -1,14 +1,9 @@
-/**
- cpp file class golosina
- */
-
 
 #include "golosina.h"
 
 /**
  * golosina implementation
  */
-
 
 //Constructor
 /**
@@ -24,7 +19,6 @@ golosina::golosina(double precio, unsigned int stock, string codigoProd , string
 golosina::~golosina() {
 
 }
-
 
 /**
  * @return time_t

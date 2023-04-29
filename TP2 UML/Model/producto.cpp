@@ -1,7 +1,3 @@
-/*
-* cpp file class producto
- */
-
 
 #include "producto.h"
 

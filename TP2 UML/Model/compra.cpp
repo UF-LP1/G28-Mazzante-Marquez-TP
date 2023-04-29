@@ -4,6 +4,10 @@
  * compra implementation
  */
 
+/**
+ * compra implementation
+ */
+
 //Método constructor
 /**
  * @param double

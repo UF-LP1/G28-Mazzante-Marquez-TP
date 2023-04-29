@@ -1,9 +1,9 @@
-/*
-* cpp file class asistAutomatico
- */
 
 #include "asistAutomatico.h"
 
+/**
+ * asistAutomatico implementation
+ */
 
 //Método constructor
 /**

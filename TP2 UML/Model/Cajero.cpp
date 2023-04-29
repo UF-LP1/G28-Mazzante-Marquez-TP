@@ -1,9 +1,9 @@
+
 #include "Cajero.h"
 
 /**
- * Cajero implementation
+ * cajero implementation
  */
-
 
 //Método constructor
 /**
