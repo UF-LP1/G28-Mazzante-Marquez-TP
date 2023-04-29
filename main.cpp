@@ -1,3 +1,5 @@
+//MAIN.CPP
+
 #include <queue>
 #include <string>
 #include <iostream>
@@ -39,14 +41,15 @@ int main() {
 	double montoCompra;
 
 	unsigned int tamanioCola;
-	tamanioCola = listaClientes.size();
+	tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
+										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
 
-	for (int i = 0; i < tamanioCola; i++) {
+	for (unsigned int i = 0; i < tamanioCola; i++) {
 
-		montoCompra = cajerocobro.cobrar(&listaClientes.front());
+		montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
 
 		if (montoCompra != 0.0)	//chequeo que haya salido todo bien 
-			cajerocobro.imprimir_factura(listaClientes.front(),montoCompra);
+			cajerocobro.imprimir_factura(listaClientes.front(),montoCompra); //imprimo las faccturas de los clientes
 
 		listaClientes.pop();
 
