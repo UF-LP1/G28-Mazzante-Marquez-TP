@@ -53,6 +53,9 @@ MetDePago compra::get_pago()
  * @return void
  */
 void compra::agregar_producto(producto p) {
+
+    listaProductos.push_back(p);
+
     return;
 }
 
