@@ -14,7 +14,7 @@ public:
  */
 compra(MetDePago, vector<producto>, double);
 
-compra();
+compra(MetDePago pago = efectivo);
 
 ~compra();
     

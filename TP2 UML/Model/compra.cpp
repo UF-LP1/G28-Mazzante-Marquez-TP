@@ -18,8 +18,8 @@ compra::compra(MetDePago pago, vector <producto> listaProductos, double monto = 
     this->listaProductos = vector<producto>(listaProductos.begin(), listaProductos.end());
 }
 
-compra::compra() {
-    this->pago = efectivo;
+compra::compra(MetDePago pago) {
+    this->pago = pago;
     this->monto = 0,0;
 }
 
