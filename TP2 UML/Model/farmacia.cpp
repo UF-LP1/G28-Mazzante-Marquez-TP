@@ -56,17 +56,10 @@ void farmacia::set_horarioSemana(string h) {
 }
 
 /**
- * @param compra co
- * @return void
- */
-void farmacia::agregar_compra(compra co) {
-    return;
-}
-
-/**
  * @return void
  */
 void farmacia::abrir() {
+    cout << "La farmacia esta abierta" << endl;
     return;
 }
 
@@ -74,6 +67,7 @@ void farmacia::abrir() {
  * @return void
  */
 void farmacia::cerrar() {
+    cout << "La farmacia esta cerrada" << endl;
     return;
 }
 
@@ -81,5 +75,13 @@ void farmacia::cerrar() {
  * @return void
  */
 void farmacia::adquirirFondos() {
+    return;
+}
+
+/**
+ * @param compra co
+ * @return void
+ */
+void farmacia::agregar_compra(compra co) {
     return;
 }

@@ -10,12 +10,17 @@
 #include "TP2 UML/Model/prodPYC.h"
 #include "TP2 UML/Model/Cajero.h"
 #include "TP2 UML/Model/prodOrtopedia.h"
+#include "TP2 UML/Model/farmacia.h"
 
 using namespace std;
 
 unsigned int asistAutomatico::numero_clientes = 0;
 
 int main() {	
+
+	farmacia miFarmacia("8_a_22", "9_a_19", "Mi_Farmacia", "Sarmiento_1853", "112345678", "Mi_farmacia@mifarmacia.com", 93294110);
+
+	miFarmacia.abrir();
 
 	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr);
 	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr);
@@ -28,18 +33,10 @@ int main() {
 	compra compra2;
 	compra compra3;
 
-	try {
-		cliente1.seleccionar_producto(shampoo);
-		cliente2.seleccionar_producto(shampoo);
-		cliente2.seleccionar_producto(cabestrilloA);
-		cliente3.seleccionar_producto(cabestrilloA);
-
-	}
-	catch (exception& nomemory) {
-
-	}
-
-	
+	cliente1.seleccionar_producto(shampoo);
+	cliente2.seleccionar_producto(shampoo);
+	cliente2.seleccionar_producto(cabestrilloA);
+	cliente3.seleccionar_producto(cabestrilloA);
 
 	queue <cliente> listaClientes;
 
@@ -73,5 +70,8 @@ int main() {
 	unsigned int num_total_clientes = asistAutomatico::get_numero();
 	
 	cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl;
+
+	miFarmacia.cerrar();
+
 	return 0;
 }
