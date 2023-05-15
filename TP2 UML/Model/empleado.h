@@ -22,7 +22,8 @@ string get_DNI();
     
 unsigned int get_sueldo();
 
-    
+virtual void llamarCliente(cliente c);
+
 /**
  * @param unsigned int
  */

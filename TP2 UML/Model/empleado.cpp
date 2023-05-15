@@ -38,6 +38,11 @@ unsigned int empleado::get_sueldo() {
     return this->sueldo;
 }
 
+void empleado::llamarCliente(cliente c)
+{
+    cout << "que pase el: " << c.num_Cliente;
+}
+
 /**
  * @param unsigned int
  * @return void

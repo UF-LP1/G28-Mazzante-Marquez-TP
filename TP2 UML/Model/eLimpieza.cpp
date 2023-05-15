@@ -38,3 +38,7 @@ void eLimpieza::set_turno(turno t) {
 void eLimpieza::mantenimiento_Instalaciones() {
     return;
 }
+void eLimpieza::llamarCliente()
+{
+}
+
