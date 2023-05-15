@@ -25,7 +25,7 @@ void llamarCliente(cliente c);
     
 void expenderRecetas();
     
-double aplicarDescuento();
+bool aplicarDescuento(cliente c);
     
 void cargarPago();
 

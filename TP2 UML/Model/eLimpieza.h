@@ -27,7 +27,6 @@ void set_turno(turno t);
     
 void mantenimiento_Instalaciones();
 
-void llamarCliente() = 0;
 
 private: 
     turno turnoTrabajo;

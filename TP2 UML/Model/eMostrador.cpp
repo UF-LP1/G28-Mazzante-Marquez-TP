@@ -41,8 +41,14 @@ void eMostrador::expenderRecetas() {
 /**
  * @return double
  */
-double eMostrador::aplicarDescuento() {
-    return 0.0;
+bool eMostrador::aplicarDescuento(cliente c) {  //se pudo haber hecho directamente en cajero pero la consigna establecia que el mostrador era el que aplicaba el descuento
+
+    bool descuentoSi = false;
+
+    if (c.get_obraSocial()) {
+        descuentoSi = true;
+    }
+    return descuentoSi;
 }
 
 /**

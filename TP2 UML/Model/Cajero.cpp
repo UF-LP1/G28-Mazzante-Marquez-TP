@@ -27,7 +27,7 @@ cajero::~cajero() {
  * @param queue<cliente>listaClientes
  * @return double
  */
-double cajero::cobrar(cliente *clienteAux) {
+double cajero::cobrar(cliente *clienteAux, bool descuentoSi) {
 
    compra* compraAux1 = nullptr; //me creo un puntero de tipo compra y lo inicializo en null
    compraAux1 = clienteAux->get_carrito(); //me copio la dirección del carrito del cliente en mi compraAux
@@ -43,7 +43,10 @@ double cajero::cobrar(cliente *clienteAux) {
 
    compraAux1->~compra();
 
-   return precioTotal;
+   if (descuentoSi)
+       return precioTotal * 0.9;                                             //le hago un 10% de descuento si tiene obra socia
+   else
+       return precioTotal;
 }
 
 void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {

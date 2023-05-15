@@ -36,9 +36,17 @@ void eLimpieza::set_turno(turno t) {
  * @return void
  */
 void eLimpieza::mantenimiento_Instalaciones() {
+
+    bool limpio;
+    limpio = false;
+    srand(time_t(NULL));
+    int tiempo = rand() % 2;
+    if (tiempo != 0) {
+        limpio = true;
+        cout << "limpio";
+    }
+    else cout << "sucio";
+
     return;
-}
-void eLimpieza::llamarCliente()
-{
 }
 
