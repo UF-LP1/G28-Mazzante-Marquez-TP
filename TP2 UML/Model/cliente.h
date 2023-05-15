@@ -26,22 +26,22 @@ cliente(necesidad, string, string, string, bool, string, string, compra*);
 ~cliente();
     
 necesidad get_TipoNecesidad();
-    
-/**
- * @param necesidad n
- */
+
 void set_TipoNecesidad(necesidad n);
     
 bool get_obraSocial();  
     
-/**
- * @param cajero c
- */
-void recibir_factura() ;
-
 string get_nombre();
 
 string get_DNI();
+
+compra* get_carrito();
+
+void ver_carrito();
+
+
+
+void recibir_factura() ;
     
 /**
  * @param cajero c
@@ -55,7 +55,7 @@ void pagar();
  */
 void seleccionar_producto(producto c);
     
-compra* get_carrito();
+
 
 private: 
     necesidad TipoNecesidad;

@@ -7,6 +7,8 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include "golosina.h"
+
 
 
 using namespace std;

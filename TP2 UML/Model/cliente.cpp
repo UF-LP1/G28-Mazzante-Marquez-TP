@@ -57,14 +57,6 @@ bool cliente::get_obraSocial() {
     return this->obraSocial;
 }
 
-/**
- * @param cajero c
- * @return void
- */
-void cliente::recibir_factura() {
-    return;
-}
-
 string cliente::get_nombre()
 {
     return this->nombre;
@@ -73,6 +65,35 @@ string cliente::get_nombre()
 string cliente::get_DNI()
 {
     return this->DNI;
+}
+
+compra* cliente::get_carrito() {
+
+    return this->carrito;
+}
+
+void cliente::ver_carrito() {
+
+    vector <producto> carrito_aux = carrito->get_productos();
+
+    for (int i = 0; i < carrito_aux.size(); i++)
+    {
+        producto* ptr_aux;
+        ptr_aux = &carrito_aux[i];
+
+        if(dynamic_cast<)
+    }
+}
+
+
+
+
+/**
+ * @param cajero c
+ * @return void
+ */
+void cliente::recibir_factura() {
+    return;
 }
 
 /**
@@ -99,13 +120,5 @@ void cliente::seleccionar_producto(producto c) {
         carrito = new compra();
     }
     carrito->agregar_producto(c);
-}
-
-/**
- * @return void
- */
-compra* cliente::get_carrito() {
-
-    return this->carrito;
 }
 

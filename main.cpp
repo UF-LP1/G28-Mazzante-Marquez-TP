@@ -60,6 +60,6 @@ int main() {
 
 	unsigned int num_total_clientes = asistAutomatico::get_numero();
 	
-
+	cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl;
 	return 0;
 }
