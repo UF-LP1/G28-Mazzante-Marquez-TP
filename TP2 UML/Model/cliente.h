@@ -8,7 +8,7 @@
 
 class cliente {
 public: 
-    const int num;
+    unsigned int num_cliente;
     
 /**
  * @param necesidad
@@ -21,7 +21,7 @@ public:
  * @param int
  * @param MetDePago
  */
-cliente(necesidad, string, string, string, bool, string, string, int, compra*);
+cliente(necesidad, string, string, string, bool, string, string, compra*);
 
 ~cliente();
     

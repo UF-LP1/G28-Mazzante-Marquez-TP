@@ -13,10 +13,13 @@
 
 using namespace std;
 
+unsigned int asistAutomatico::numero_clientes = 0;
+
 int main() {	
-	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", 13, nullptr);
-	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", 14, nullptr);
-	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", 15, nullptr);
+
+	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr);
+	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr);
+	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr);
 
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 	prodOrtopedia cabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
@@ -55,6 +58,7 @@ int main() {
 
 	}
 
+	unsigned int num_total_clientes = asistAutomatico::get_numero();
 	
 
 	return 0;

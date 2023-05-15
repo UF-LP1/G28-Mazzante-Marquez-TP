@@ -4,23 +4,16 @@
 
 class asistAutomatico {
 public: 
-    unsigned int numero;
+    static unsigned int numero_clientes;
 
 /**
  * @param unsigned int
  */
-asistAutomatico(unsigned int);
+asistAutomatico();
 
 ~asistAutomatico();
-
-int generar_numero();
     
-/**
- * @param int
- */
-void set_numero(int);
-    
-int get_numero();
+static unsigned int get_numero();
 
 };
 

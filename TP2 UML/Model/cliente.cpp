@@ -17,13 +17,15 @@
  * @param int
  * @param MetDePago
  */
-cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, int num, compra * co) 
-    :nombre(nombre), apellido(apellido), DNI(DNI), num(num){
+cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, compra * co) 
+    :nombre(nombre), apellido(apellido), DNI(DNI){
     this->TipoNecesidad= n;
     this->obraSocial = obraSocial;
     this->telContacto = telContacto;
     this->mail = mail;
     carrito = co;
+    this->num_cliente = ++asistAutomatico::numero_clientes;
+
 }
 
 //Método destructor
