@@ -81,7 +81,7 @@ void cliente::ver_carrito() {
         producto* ptr_aux;
         ptr_aux = &carrito_aux[i];
 
-        if(dynamic_cast<)
+        
     }
 }
 

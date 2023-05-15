@@ -28,10 +28,18 @@ int main() {
 	compra compra2;
 	compra compra3;
 
-	cliente1.seleccionar_producto(shampoo);
-	cliente2.seleccionar_producto(shampoo);
-	cliente2.seleccionar_producto(cabestrilloA);
-	cliente3.seleccionar_producto(cabestrilloA);
+	try {
+		cliente1.seleccionar_producto(shampoo);
+		cliente2.seleccionar_producto(shampoo);
+		cliente2.seleccionar_producto(cabestrilloA);
+		cliente3.seleccionar_producto(cabestrilloA);
+
+	}
+	catch (exception& nomemory) {
+
+	}
+
+	
 
 	queue <cliente> listaClientes;
 
@@ -47,9 +55,13 @@ int main() {
 	tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
 										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
 
+	bool descuento=false;
+
+
+
 	for (unsigned int i = 0; i < tamanioCola; i++) {
 
-		montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
+		montoCompra = cajerocobro.cobrar(&listaClientes.front(), descuento); //le cobro a los clientes
 
 		if (montoCompra != 0.0)	//chequeo que haya salido todo bien 
 			cajerocobro.imprimir_factura(listaClientes.front(),montoCompra); //imprimo las faccturas de los clientes

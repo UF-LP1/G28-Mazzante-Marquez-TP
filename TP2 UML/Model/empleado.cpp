@@ -40,7 +40,7 @@ unsigned int empleado::get_sueldo() {
 
 void empleado::llamarCliente(cliente c)
 {
-    cout << "que pase el: " << c.num_Cliente;
+    cout << "que pase el: " << c.num_cliente;
 }
 
 /**
