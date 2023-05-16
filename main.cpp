@@ -18,7 +18,7 @@ unsigned int asistAutomatico::numero_clientes = 0;
 
 int main() {	
 
-	farmacia miFarmacia("8_a_22", "9_a_19", "Mi_Farmacia", "Sarmiento_1853", "112345678", "Mi_farmacia@mifarmacia.com", 93294110);
+	farmacia miFarmacia("8_a_22", "9_a_19", "Mi_Farmacia", "Sarmiento_1853", "112345678", "Mi_farmacia@mifarmacia.com", 1000000);
 
 	miFarmacia.abrir();
 
@@ -29,14 +29,15 @@ int main() {
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 	prodOrtopedia cabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
 
-	compra compra1;
-	compra compra2;
-	compra compra3;
-
+	cliente1.seleccionar_producto(shampoo);
 	cliente1.seleccionar_producto(shampoo);
 	cliente2.seleccionar_producto(shampoo);
 	cliente2.seleccionar_producto(cabestrilloA);
 	cliente3.seleccionar_producto(cabestrilloA);
+
+	compra* compra1 = cliente1.get_carrito();
+
+	compra1->eliminar_producto(shampoo);
 
 	queue <cliente> listaClientes;
 
@@ -52,9 +53,13 @@ int main() {
 	tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
 										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
 
+	double montoTotal = 0.0;
+
 	for (unsigned int i = 0; i < tamanioCola; i++) {
 
 		montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
+
+		montoTotal += montoCompra;
 
 		if (montoCompra != 0.0)	//chequeo que haya salido todo bien 
 			cajerocobro.imprimir_factura(listaClientes.front(),montoCompra); //imprimo las faccturas de los clientes
@@ -66,6 +71,8 @@ int main() {
 	unsigned int num_total_clientes = asistAutomatico::get_numero();
 	
 	cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl;
+
+	miFarmacia.set_fondos(miFarmacia.get_fondos() + (long int)montoTotal);	//estariamos perdiendo los decimales pero en comparación con el resto de los fondos lo tomamos como despreciable
 
 	miFarmacia.cerrar();
 
