@@ -36,6 +36,8 @@ int main() {
 	cliente3.seleccionar_producto(cabestrilloA);
 
 	compra* compra1 = cliente1.get_carrito();
+	compra* compra2 = cliente2.get_carrito();
+	compra* compra3 = cliente3.get_carrito();
 
 	compra1->eliminar_producto(shampoo);
 
@@ -75,6 +77,10 @@ int main() {
 	miFarmacia.set_fondos(miFarmacia.get_fondos() + (long int)montoTotal);	//estariamos perdiendo los decimales pero en comparación con el resto de los fondos lo tomamos como despreciable
 
 	miFarmacia.cerrar();
+
+	delete compra1;
+	delete compra2;
+	delete compra3;
 
 	return 0;
 }
