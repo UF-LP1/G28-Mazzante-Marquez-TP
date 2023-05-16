@@ -66,6 +66,16 @@ void compra::agregar_producto(producto p) {
  * @return void
  */
 void compra::eliminar_producto(producto p) {
+
+    for (int i = 0; i < listaProductos.size(); i++)
+    {
+        if (listaProductos[i].codigoProd == p.codigoProd) {
+
+            listaProductos.erase(listaProductos.begin()+i);
+
+            monto = monto - p.precio;
+        }
+    }
     return;
 }
 

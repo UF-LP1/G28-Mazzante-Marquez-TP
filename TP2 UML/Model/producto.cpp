@@ -12,10 +12,11 @@
  * @param string
  * @param string
  */
-producto::producto(double precio, unsigned int stock, string codigoProd, string marca) :marca(marca) {
+producto::producto(double precio, unsigned int stock, string codigoProd, string marca){
     this->precio = precio;
     this->stock = stock;
     this->codigoProd = codigoProd;
+    this->marca = marca;
 }
 
 //Método destructor

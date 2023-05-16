@@ -16,7 +16,7 @@ class producto {
 public: 
     double precio;
     string codigoProd;
-    const string marca;
+    string marca;
   
 /**
  * @param double
