@@ -1,6 +1,6 @@
 
 #include "Cajero.h"
-
+#include <exception>
 /**
  * cajero implementation
  */
@@ -27,7 +27,7 @@ cajero::~cajero() {
  * @param queue<cliente>listaClientes
  * @return double
  */
-double cajero::cobrar(cliente *clienteAux, bool descuentoSi) {
+double cajero::cobrar(cliente *clienteAux) {
 
    compra* compraAux1 = nullptr; //me creo un puntero de tipo compra y lo inicializo en null
    compraAux1 = clienteAux->get_carrito(); //me copio la dirección del carrito del cliente en mi compraAux
@@ -41,9 +41,19 @@ double cajero::cobrar(cliente *clienteAux, bool descuentoSi) {
 
    MetDePago formaDePago = compraAux1->get_pago();
 
+   try {
+       float pago = clienteAux->get_billetera() - precioTotal;
+        clienteAux->pagar(pago);
+       if (pago < 0.0) throw exception();
+   }
+   catch (exception& nohayplata) {
+       cout << "el cliente " << clienteAux->get_nombre()<<" no cuenta con suficiente dinero"<<endl;
+       return 0;
+   }
+  
    compraAux1->~compra();
 
-   if (descuentoSi)
+   if (clienteAux->get_obraSocial())
        return precioTotal * 0.9;                                             //le hago un 10% de descuento si tiene obra socia
    else
        return precioTotal;

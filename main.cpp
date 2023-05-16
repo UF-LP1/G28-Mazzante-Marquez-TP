@@ -22,9 +22,9 @@ int main() {
 
 	miFarmacia.abrir();
 
-	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr);
-	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr);
-	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr);
+	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr, 70.0);
+	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0);
+	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0);
 
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 	prodOrtopedia cabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
@@ -52,13 +52,9 @@ int main() {
 	tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
 										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
 
-	bool descuento=false;
-
-
-
 	for (unsigned int i = 0; i < tamanioCola; i++) {
 
-		montoCompra = cajerocobro.cobrar(&listaClientes.front(), descuento); //le cobro a los clientes
+		montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
 
 		if (montoCompra != 0.0)	//chequeo que haya salido todo bien 
 			cajerocobro.imprimir_factura(listaClientes.front(),montoCompra); //imprimo las faccturas de los clientes

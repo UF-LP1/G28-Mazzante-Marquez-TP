@@ -17,7 +17,7 @@
  * @param int
  * @param MetDePago
  */
-cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, compra * co) 
+cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, compra * co, float billetera) 
     :nombre(nombre), apellido(apellido), DNI(DNI){
     this->TipoNecesidad= n;
     this->obraSocial = obraSocial;
@@ -25,6 +25,7 @@ cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obr
     this->mail = mail;
     carrito = co;
     this->num_cliente = ++asistAutomatico::numero_clientes;
+    this->billetera = billetera;
 
 }
 
@@ -107,7 +108,10 @@ void cliente::recibir_bolsaYCompra() {
 /**
  * @return void
  */
-void cliente::pagar() {
+void cliente::pagar(float nuevabilletera) {
+    
+    this->billetera = nuevabilletera;
+
     return;
 }
 
@@ -121,4 +125,11 @@ void cliente::seleccionar_producto(producto c) {
     }
     carrito->agregar_producto(c);
 }
+
+float cliente::get_billetera()
+{
+    return this->billetera;
+}
+
+
 

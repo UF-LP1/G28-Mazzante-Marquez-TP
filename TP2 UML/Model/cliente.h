@@ -21,7 +21,7 @@ public:
  * @param int
  * @param MetDePago
  */
-cliente(necesidad, string, string, string, bool, string, string, compra*);
+cliente(necesidad, string, string, string, bool, string, string, compra*, float);
 
 ~cliente();
     
@@ -48,13 +48,16 @@ void recibir_factura() ;
  */
 void recibir_bolsaYCompra() ;
     
-void pagar();
+void pagar(float nuevabilletera);
     
 /**
  * @param producto c
  */
 void seleccionar_producto(producto c);
-    
+
+float get_billetera();
+
+ 
 
 
 private: 
@@ -65,6 +68,7 @@ private:
     bool obraSocial;
     string telContacto;
     string mail;
+    float billetera;
 
     compra *carrito; //lo ponemos como *compra porque ppuede tener o 1 o 0 compras.
 };
