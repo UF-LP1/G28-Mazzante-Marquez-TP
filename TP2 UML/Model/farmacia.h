@@ -3,6 +3,7 @@
 #define _FARMACIA_H
 
 #include "compra.h"
+#include <forward_list>
 
 class farmacia {
 public: 
@@ -47,7 +48,7 @@ void adquirirFondos();
 /**
  * @param compra co
  */
-void agregar_compra(compra co);
+void agregar_compra(compra *co);
 
 private: 
     unsigned long int fondos;

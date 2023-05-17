@@ -65,9 +65,10 @@ int main() {
 
 		montoTotal += montoCompra;
 
-		if (montoCompra != 0.0)	//chequeo que haya salido todo bien 
-			cajerocobro.imprimir_factura(listaClientes.front(),montoCompra); //imprimo las faccturas de los clientes
-
+		if (montoCompra != 0.0) {	//chequeo que haya salido todo bien 
+			cajerocobro.imprimir_factura(listaClientes.front(), montoCompra); //imprimo las faccturas de los clientes
+			miFarmacia.agregar_compra(listaClientes.front().get_carrito());
+		}
 		listaClientes.pop();
 
 	}
