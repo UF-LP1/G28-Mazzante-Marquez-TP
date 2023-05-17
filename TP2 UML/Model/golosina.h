@@ -7,6 +7,7 @@
 class golosina: public producto {
 public: 
     time_t vencimiento;
+    string tipo_golosina;
     
 /**
  * @param string

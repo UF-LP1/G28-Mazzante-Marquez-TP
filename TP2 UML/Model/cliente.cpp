@@ -83,6 +83,9 @@ void cliente::ver_carrito() {
 
     producto* ptr_aux = nullptr;
 
+    if (this->get_carrito() != nullptr)
+        cout << endl << "Carrito de: " << this->get_nombre() << endl;
+
     for (int i = 0; i < carrito_aux.size(); i++)
     {
         ptr_aux = carrito_aux[i];

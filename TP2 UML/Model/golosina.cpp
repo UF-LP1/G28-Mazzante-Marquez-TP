@@ -29,7 +29,7 @@ time_t golosina::get_vencimiento() {
 
 void golosina::imprimir_producto()
 {
-    cout << "Producto - " << this->marca;
+    cout << "Producto - " << this->tipo_golosina << endl;
 }
 
 
