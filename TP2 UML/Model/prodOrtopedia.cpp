@@ -18,8 +18,19 @@ prodOrtopedia::~prodOrtopedia() {
 
 void prodOrtopedia::imprimir_producto()
 {
-    cout << "0: vendasElasticas - 1: cabestrillos - 2: mediasDeCompresion" << endl;
-    cout << "Producto - " << this->tipoProducto<< endl;
+    cout << "Producto ";
+    switch (tipoProducto)
+    {
+    case vendasElasticas:  cout << "- " << "Vendas elasticas" << endl;
+        break;
+    case cabestrillos: cout << "- " << "cabestrillos" << endl;
+        break;
+    case mediasDeCompresion: cout << "- " << "medias de compresion" << endl;
+        break;
+    default:
+        break;
+    }
+   
 }
 
 /**

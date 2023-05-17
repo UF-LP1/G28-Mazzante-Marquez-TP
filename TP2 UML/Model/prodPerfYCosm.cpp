@@ -26,8 +26,30 @@ prodPYC prodPerfYCosm::get_tipoProducto() {
 
 void prodPerfYCosm::imprimir_producto()
 {
-    cout << "0: champu - 1: desorante - 2: jabon - 3: cremaCuerpo - 4: cremaCara - 5: perfume - 6: maquillaje - 7: esmalteUnia" << endl;
-    cout << "Producto - " << this->tipoProducto << endl;
+	cout << "Producto ";
+
+	switch (tipoProducto)
+	{
+	case champu:cout << "- " << "shampoo" << endl;
+		break;
+	case desorante: cout << "- " << "desodorante" << endl;
+		break;
+	case jabon: cout << "- " << "jabon" << endl;
+		break;
+	case cremaCuerpo: cout << "- " << "crema cuerpo" << endl;
+		break;
+	case cremaCara: cout << "- " << "crema cara" << endl;
+		break;
+	case perfume: cout << "- " << "perfume" << endl;
+		break;
+	case maquillaje: cout << "- " << "maquillaje" << endl;
+		break;
+	case esmalteUnia: cout << "- " << "esmalte unia" << endl;
+		break;
+	default:
+		break;
+	}
+    
 }
 
 
