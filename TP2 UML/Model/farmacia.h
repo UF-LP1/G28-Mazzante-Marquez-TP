@@ -52,6 +52,7 @@ void agregar_compra(compra *co);
 
 private: 
     unsigned long int fondos;
+    forward_list<compra*> listaCompras;
 };
 
 #endif //_FARMACIA_H

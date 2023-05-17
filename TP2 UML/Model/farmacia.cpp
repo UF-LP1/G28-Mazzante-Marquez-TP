@@ -78,15 +78,9 @@ void farmacia::adquirirFondos() {
     return;
 }
 
-/**
- * @param compra co
- * @return void
- */
 void farmacia::agregar_compra(compra *co) {
 
-    forward_list<compra> listaCompras;
-
-    listaCompras.push_front(*co);
+    listaCompras.push_front(co);
 
     return;
 }
