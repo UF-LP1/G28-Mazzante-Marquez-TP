@@ -63,7 +63,7 @@ void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
         << endl;
     
     MetDePago metpago = clienteAux.get_pago();
-
+    cout << "Metodo de pago: ";
     switch (metpago)
     {
     case efectivo: cout << "efectivo" << endl;
