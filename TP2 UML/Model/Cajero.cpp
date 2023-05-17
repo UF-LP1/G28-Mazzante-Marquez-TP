@@ -60,10 +60,24 @@ double cajero::cobrar(cliente *clienteAux) {
 void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
 
     cout << "DNI cliente: " << clienteAux.get_DNI() << endl << "Nombre cliente: " << clienteAux.get_nombre()
-        << endl << "Metodo de pago (0: efectivo, 1: tarjeta de credito, 2: tarjeta de debito, 3: App de celular) : " 
-        << clienteAux.get_pago() << endl << "Monto: $" << precioTotal<<endl<<endl;
-
+        << endl;
     
+    MetDePago metpago = clienteAux.get_pago();
+
+    switch (metpago)
+    {
+    case efectivo: cout << "efectivo" << endl;
+        break;
+    case tarjetadecredito: cout << "tarjeta de credito" << endl;
+        break;
+    case tarjetaDeDebito: cout << "tarjeta de debito" << endl;
+        break;
+    case AppPagoCelular: cout << "App de Pago celular" << endl;
+        break;
+    default:
+        break;
+    }
+        cout<< endl << "Monto: $" << precioTotal<<endl<<endl;    
     return;
 }
 
