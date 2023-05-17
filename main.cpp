@@ -75,7 +75,7 @@ int main() {
 
 	unsigned int num_total_clientes = asistAutomatico::get_numero();
 	
-	cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl;
+	cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl << endl;
 
 	miFarmacia.set_fondos(miFarmacia.get_fondos() + (long int)montoTotal);	//estariamos perdiendo los decimales pero en comparación con el resto de los fondos lo tomamos como despreciable
 
