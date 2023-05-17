@@ -12,14 +12,12 @@
 /**
  * @param double
  */
-compra::compra(MetDePago pago, vector <producto> listaProductos, double monto = 0) {
+compra::compra(vector <producto> listaProductos, double monto = 0) {
     this->monto = monto;
-    this->pago = pago;
     this->listaProductos = vector<producto>(listaProductos.begin(), listaProductos.end());
 }
 
-compra::compra(MetDePago pago) {
-    this->pago = pago;
+compra::compra() {
     this->monto = 0,0;
 }
 
@@ -43,10 +41,6 @@ double compra::get_monto() {
     return this->monto;
 }
 
-MetDePago compra::get_pago()
-{
-    return this->pago;
-}
 
 /**
  * @param producto p

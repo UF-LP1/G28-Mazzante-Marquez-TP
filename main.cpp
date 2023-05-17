@@ -22,9 +22,9 @@ int main() {
 
 	miFarmacia.abrir();
 
-	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr, 70.0);
-	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0);
-	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0);
+	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr, 70.0, efectivo);
+	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0, AppPagoCelular);
+	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0, tarjetaDeDebito);
 
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 	prodOrtopedia cabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);

@@ -17,7 +17,7 @@
  * @param int
  * @param MetDePago
  */
-cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, compra * co, float billetera) 
+cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obraSocial,string telContacto, string mail, compra * co, float billetera, MetDePago metpago) 
     :nombre(nombre), apellido(apellido), DNI(DNI){
     this->TipoNecesidad= n;
     this->obraSocial = obraSocial;
@@ -26,7 +26,7 @@ cliente::cliente(necesidad n, string nombre,string apellido,string DNI, bool obr
     carrito = co;
     this->num_cliente = ++asistAutomatico::numero_clientes;
     this->billetera = billetera;
-
+    this->metpago = metpago;
 }
 
 //Método destructor
@@ -124,6 +124,12 @@ void cliente::seleccionar_producto(producto c) {
         carrito = new compra();
     }
     carrito->agregar_producto(c);
+}
+
+
+MetDePago cliente::get_pago()
+{
+    return this->metpago;
 }
 
 float cliente::get_billetera()

@@ -5,6 +5,7 @@
 #include "necesidad.h"
 #include "compra.h"
 #include "asistAutomatico.h"
+#include "MetDePago.h"
 
 class cliente {
 public: 
@@ -21,9 +22,11 @@ public:
  * @param int
  * @param MetDePago
  */
-cliente(necesidad, string, string, string, bool, string, string, compra*, float);
+cliente(necesidad, string, string, string, bool, string, string, compra*, float, MetDePago);
 
 ~cliente();
+
+MetDePago get_pago();
     
 necesidad get_TipoNecesidad();
 
@@ -69,6 +72,7 @@ private:
     string telContacto;
     string mail;
     float billetera;
+    MetDePago metpago;
 
     compra *carrito; //lo ponemos como *compra porque ppuede tener o 1 o 0 compras.
 };

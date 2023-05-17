@@ -3,7 +3,6 @@
 #define _COMPRA_H
 
 #include "producto.h"
-#include "MetDePago.h"
 
 
 class compra {
@@ -12,9 +11,9 @@ public:
 /**
  * @param double
  */
-compra(MetDePago, vector<producto>, double);
+compra(vector<producto>, double);
 
-compra(MetDePago pago = efectivo);
+compra();
 
 ~compra();
     
@@ -25,7 +24,6 @@ void set_monto(double d);
     
 double get_monto();
 
-MetDePago get_pago();
     
 /**
  * @param producto p
@@ -41,7 +39,6 @@ vector<producto> get_productos();
 
 private: 
     double monto;
-    MetDePago pago;
     vector <producto> listaProductos;
 };
 

@@ -39,7 +39,7 @@ double cajero::cobrar(cliente *clienteAux) {
 
    precioTotal = compraAux1->get_monto(); 
 
-   MetDePago formaDePago = compraAux1->get_pago();
+   MetDePago formaDePago = clienteAux->get_pago();
 
    try {
        float pago = clienteAux->get_billetera() - precioTotal;
@@ -50,8 +50,6 @@ double cajero::cobrar(cliente *clienteAux) {
        cout << "el cliente " << clienteAux->get_nombre()<<" no cuenta con suficiente dinero"<<endl;
        return 0;
    }
-  
-   compraAux1->~compra();
 
    if (clienteAux->get_obraSocial())
        return precioTotal * 0.9;                                             //le hago un 10% de descuento si tiene obra socia
@@ -61,12 +59,10 @@ double cajero::cobrar(cliente *clienteAux) {
 
 void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
 
-    compra* compraAux2 = clienteAux.get_carrito(); //no chequeo que sea nullptr porque ya chequeo que exista la compra en el main
-
     cout << "DNI cliente: " << clienteAux.get_DNI() << endl << "Nombre cliente: " << clienteAux.get_nombre()
         << endl << "Metodo de pago (0: efectivo, 1: tarjeta de credito, 2: tarjeta de debito, 3: App de celular) : " 
-        << compraAux2->get_pago() << endl << "Monto: $" << precioTotal<<endl<<endl;
-    compraAux2->~compra();
+        << clienteAux.get_pago() << endl << "Monto: $" << precioTotal<<endl<<endl;
+
     
     return;
 }
