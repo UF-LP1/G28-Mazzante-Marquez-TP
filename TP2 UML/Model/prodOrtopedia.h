@@ -18,6 +18,8 @@ prodOrtopedia(double, unsigned int, string, string, prodOrt);
 prodOrt get_tipoProducto();
 
 ~prodOrtopedia();
+
+void imprimir_producto();
 };
 
 #endif //_PRODORTOPEDIA_H

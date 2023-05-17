@@ -26,3 +26,11 @@ golosina::~golosina() {
 time_t golosina::get_vencimiento() {
     return this->vencimiento;
 }
+
+void golosina::imprimir_producto()
+{
+    cout << "Producto - " << this->marca;
+}
+
+
+

@@ -56,7 +56,7 @@ void pagar(float nuevabilletera);
 /**
  * @param producto c
  */
-void seleccionar_producto(producto c);
+void seleccionar_producto(producto* c);
 
 float get_billetera();
 

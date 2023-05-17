@@ -17,6 +17,8 @@ prodPerfYCosm(double precio, unsigned int stock, string codigoProd, string marca
 ~prodPerfYCosm();
 
 prodPYC get_tipoProducto();
+
+void imprimir_producto();
 };
 
 #endif //_PRODPERFYCOSM_H

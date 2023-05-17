@@ -11,7 +11,7 @@ public:
 /**
  * @param double
  */
-compra(vector<producto>, double);
+compra(vector<producto*>, double);
 
 compra();
 
@@ -28,18 +28,18 @@ double get_monto();
 /**
  * @param producto p
  */
-void agregar_producto(producto p);
+void agregar_producto(producto* p);
     
 /**
  * @param producto p
  */
-void eliminar_producto(producto p);
+void eliminar_producto(producto* p);
 
-vector<producto> get_productos();
+vector<producto*> get_productos();
 
 private: 
     double monto;
-    vector <producto> listaProductos;
+    vector <producto*> listaProductos;
 };
 
 #endif //_COMPRA_H

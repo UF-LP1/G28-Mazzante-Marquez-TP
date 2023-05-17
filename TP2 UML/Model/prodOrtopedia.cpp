@@ -16,6 +16,11 @@ prodOrtopedia::~prodOrtopedia() {
 
 }
 
+void prodOrtopedia::imprimir_producto()
+{
+    cout << "Producto - " << this->tipoProducto << endl;
+}
+
 /**
  * @return prodOrt
  */

@@ -17,6 +17,8 @@ public:
     ~medicamento();
 
     time_t get_vencimiento();
+
+    void imprimir_producto();
 };
 
 #endif //_MEDICAMENTO_H

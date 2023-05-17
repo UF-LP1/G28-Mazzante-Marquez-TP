@@ -24,4 +24,9 @@ prodPYC prodPerfYCosm::get_tipoProducto() {
     return this->tipoProducto;
 }
 
+void prodPerfYCosm::imprimir_producto()
+{
+    cout << "Producto - " << this->tipoProducto << endl;
+}
+
 

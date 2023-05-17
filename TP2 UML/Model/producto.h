@@ -39,6 +39,8 @@ unsigned int get_stock();
     
 string get_codigoProd();
 
+virtual void imprimir_producto() = 0;
+
 protected: 
     unsigned int stock;
 

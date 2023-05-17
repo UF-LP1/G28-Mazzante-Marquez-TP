@@ -12,9 +12,9 @@
 /**
  * @param double
  */
-compra::compra(vector <producto> listaProductos, double monto = 0) {
+compra::compra(vector <producto*> listaProductos, double monto = 0) {
     this->monto = monto;
-    this->listaProductos = vector<producto>(listaProductos.begin(), listaProductos.end());
+    this->listaProductos = vector<producto*>(listaProductos.begin(), listaProductos.end());
 }
 
 compra::compra() {
@@ -46,11 +46,11 @@ double compra::get_monto() {
  * @param producto p
  * @return void
  */
-void compra::agregar_producto(producto p) {
+void compra::agregar_producto(producto* p) {
 
     listaProductos.push_back(p);
 
-    monto += p.precio;
+    monto += p->precio;
 
     return;
 }
@@ -59,21 +59,21 @@ void compra::agregar_producto(producto p) {
  * @param producto p
  * @return void
  */
-void compra::eliminar_producto(producto p) {
+void compra::eliminar_producto(producto *p) {
 
     for (int i = 0; i < listaProductos.size(); i++)
     {
-        if (listaProductos[i].codigoProd == p.codigoProd) {
+        if (listaProductos[i]->codigoProd == p->codigoProd) {
 
             listaProductos.erase(listaProductos.begin()+i);
 
-            monto = monto - p.precio;
+            monto = monto - p->precio;
         }
     }
     return;
 }
 
-vector <producto> compra::get_productos() {
+vector <producto*> compra::get_productos() {
 
     return this->listaProductos;
 }

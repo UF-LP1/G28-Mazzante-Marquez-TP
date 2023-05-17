@@ -1,5 +1,9 @@
 
 #include "cliente.h"
+#include "golosina.h"
+#include "medicamento.h"
+#include "prodOrtopedia.h"
+#include "prodPerfYCosm.h"
 
 /**
  * cliente implementation
@@ -75,15 +79,26 @@ compra* cliente::get_carrito() {
 
 void cliente::ver_carrito() {
 
-    vector <producto> carrito_aux = carrito->get_productos();
+    vector <producto*> carrito_aux = carrito->get_productos();
+
+    producto* ptr_aux = nullptr;
 
     for (int i = 0; i < carrito_aux.size(); i++)
     {
-        producto* ptr_aux;
-        ptr_aux = &carrito_aux[i];
+        ptr_aux = carrito_aux[i];
 
-        
+        if (dynamic_cast<golosina*>(ptr_aux) != nullptr)
+            dynamic_cast<golosina*>(ptr_aux)->imprimir_producto();
+        else if (dynamic_cast<prodOrtopedia*>(ptr_aux) != nullptr)
+            dynamic_cast<prodOrtopedia*>(ptr_aux)->imprimir_producto();
+        else
+            dynamic_cast<prodPerfYCosm*>(ptr_aux)->imprimir_producto();
     }
+
+    // delete ptr_aux;       //no sabemos por que pero nos tira error aca.
+
+    return;
+
 }
 
 
@@ -119,7 +134,7 @@ void cliente::pagar(float nuevabilletera) {
  * @param producto c
  * @return void
  */
-void cliente::seleccionar_producto(producto c) {
+void cliente::seleccionar_producto(producto *c) {
     if (carrito == nullptr) {
         carrito = new compra();
     }

@@ -29,17 +29,17 @@ int main() {
 	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
 	prodOrtopedia cabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
 
-	cliente1.seleccionar_producto(shampoo);
-	cliente1.seleccionar_producto(shampoo);
-	cliente2.seleccionar_producto(shampoo);
-	cliente2.seleccionar_producto(cabestrilloA);
-	cliente3.seleccionar_producto(cabestrilloA);
+	cliente1.seleccionar_producto(&shampoo);
+	cliente1.seleccionar_producto(&shampoo);
+	cliente2.seleccionar_producto(&shampoo);
+	cliente2.seleccionar_producto(&cabestrilloA);
+	cliente3.seleccionar_producto(&cabestrilloA);
 
 	compra* compra1 = cliente1.get_carrito();
 	compra* compra2 = cliente2.get_carrito();
 	compra* compra3 = cliente3.get_carrito();
 
-	compra1->eliminar_producto(shampoo);
+	compra1->eliminar_producto(&shampoo);
 
 	queue <cliente> listaClientes;
 
@@ -56,6 +56,8 @@ int main() {
 										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
 
 	double montoTotal = 0.0;
+
+	cliente2.ver_carrito();
 
 	for (unsigned int i = 0; i < tamanioCola; i++) {
 

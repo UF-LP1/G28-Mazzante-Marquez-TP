@@ -18,6 +18,8 @@ golosina(double, unsigned int, string, string, time_t);
 
 time_t get_vencimiento();
 
+void imprimir_producto();
+
 };
 
 #endif //_GOLOSINA_H
