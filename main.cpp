@@ -34,6 +34,7 @@ int main() {
 	cliente1.seleccionar_producto(&shampoo);
 	cliente1.seleccionar_producto(&shampoo);
 	cliente2.seleccionar_producto(&shampoo);
+	cliente2.seleccionar_producto(&shampoo);
 	cliente2.seleccionar_producto(&cabestrilloA);
 	cliente3.seleccionar_producto(&cabestrilloA);
 

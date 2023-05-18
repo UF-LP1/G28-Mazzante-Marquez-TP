@@ -77,7 +77,7 @@ void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
     default:
         break;
     }
-        cout<< "Monto: $" << precioTotal<<endl<<endl;    
+        cout<< "Monto: $" << clienteAux.get_carrito()->get_monto() <<  endl  <<  endl;    
     return;
 }
 

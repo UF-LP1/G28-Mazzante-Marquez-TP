@@ -100,7 +100,8 @@ void cliente::ver_carrito() {
             dynamic_cast<prodPerfYCosm*>(ptr_aux)->imprimir_producto();
     }
 
-    // delete ptr_aux;       //no sabemos por que pero nos tira error aca.
+    ptr_aux = nullptr;
+    delete ptr_aux;       //no sabemos por que pero nos tira error aca.
 
     return;
 
