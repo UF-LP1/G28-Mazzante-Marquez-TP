@@ -94,6 +94,8 @@ void cliente::ver_carrito() {
             dynamic_cast<golosina*>(ptr_aux)->imprimir_producto();
         else if (dynamic_cast<prodOrtopedia*>(ptr_aux) != nullptr)
             dynamic_cast<prodOrtopedia*>(ptr_aux)->imprimir_producto();
+        else if (dynamic_cast<medicamento*>(ptr_aux) != nullptr)
+            dynamic_cast<medicamento*>(ptr_aux)->imprimir_producto();
         else
             dynamic_cast<prodPerfYCosm*>(ptr_aux)->imprimir_producto();
     }
