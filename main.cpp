@@ -16,6 +16,8 @@ using namespace std;
 
 unsigned int asistAutomatico::numero_clientes = 0;
 
+void actualizar_stock(compra * Comprita_Aux);
+
 int main() {	
 
 	farmacia miFarmacia("8_a_22", "9_a_19", "Mi_Farmacia", "Sarmiento_1853", "112345678", "Mi_farmacia@mifarmacia.com", 1000000);
@@ -57,7 +59,9 @@ int main() {
 
 	double montoTotal = 0.0;
 
-	cliente2.ver_carrito();
+	cliente2.ver_carrito();	//prubo el metodo ver carrito
+
+	compra* comprita_Aux = nullptr;
 
 	for (unsigned int i = 0; i < tamanioCola; i++) {
 
@@ -68,10 +72,16 @@ int main() {
 		if (montoCompra != 0.0) {	//chequeo que haya salido todo bien 
 			cajerocobro.imprimir_factura(listaClientes.front(), montoCompra); //imprimo las faccturas de los clientes
 			miFarmacia.agregar_compra(listaClientes.front().get_carrito());
+
+			comprita_Aux = listaClientes.front().get_carrito();
+			actualizar_stock(comprita_Aux);		//actualizo el stock de los productos que se llevaron
+
 		}
 		listaClientes.pop();
 
 	}
+	comprita_Aux = nullptr;
+	delete comprita_Aux;
 
 	unsigned int num_total_clientes = asistAutomatico::get_numero();
 	
@@ -86,5 +96,18 @@ int main() {
 	delete compra3;
 
 	return 0;
+
+}
+
+
+
+void actualizar_stock(compra * Comprita_Aux) {
+
+	vector<producto*> listaProdAActualizar = Comprita_Aux->get_productos();
+
+	for (int i = 0; i < listaProdAActualizar.size(); i++)
+	{
+		listaProdAActualizar[i]->set_stock(listaProdAActualizar[i]->get_stock() - 1);
+	}
 
 }

@@ -36,6 +36,8 @@ double get_precio();
 void set_precio(double);
     
 unsigned int get_stock();
+
+void set_stock(unsigned int s);
     
 string get_codigoProd();
 

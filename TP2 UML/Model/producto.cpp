@@ -46,6 +46,11 @@ unsigned int producto::get_stock() {
     return this-> stock;
 }
 
+void producto::set_stock(unsigned int stock)
+{
+    this->stock = stock;
+}
+
 /**
  * @return string
  */
