@@ -80,6 +80,39 @@ int main() {
 
 	switch (numeroAux)
 	{
+		case 0: break;
+		case 1: cliente1.seleccionar_producto(&Shampoo);
+			break;
+		case 2: cliente1.seleccionar_producto(&Desodorante);
+			break;
+		case 3: cliente1.seleccionar_producto(&Jabon);
+			break;
+		case 4: cliente1.seleccionar_producto(&Cremacara);
+			break;
+		case 5: cliente1.seleccionar_producto(&Perfume);
+			break;
+		case 6: cliente1.seleccionar_producto(&Maquillaje);
+			break;
+		case 7: cliente1.seleccionar_producto(&EsmalteUnia);
+			break;
+		case 8: cliente1.seleccionar_producto(&CabestrilloA);
+			break;
+		case 9: cliente1.seleccionar_producto(&VendasElasticas);
+			break;
+		case 10: cliente1.seleccionar_producto(&MediasDeCompresion);
+			break;
+		case 11: cliente1.seleccionar_producto(&Chupetin);
+			break;
+		case 12: cliente1.seleccionar_producto(&Bonobon);
+			break;
+		case 13: cliente1.seleccionar_producto(&Cofler);
+			break;
+		case 14: cliente1.seleccionar_producto(&Ibupirac);
+			break;
+		case 15: cliente1.seleccionar_producto(&Actron);
+			break;
+		case 16: cliente1.seleccionar_producto(&Paracetamol);
+			break;
 	default:
 		cout << "El producto no existe elija otro";
 	}
@@ -88,25 +121,8 @@ int main() {
 
 
 
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	cliente1.seleccionar_producto(&Shampoo);
-	cliente1.seleccionar_producto(&Shampoo);
-	cliente2.seleccionar_producto(&Shampoo);
-	cliente2.seleccionar_producto(&Shampoo);
-	cliente2.seleccionar_producto(&CabestrilloA);
 	cliente3.seleccionar_producto(&CabestrilloA);
 	for (int i = 0; i < 20; i++) {
 		cliente4.seleccionar_producto(&Chupetin);
