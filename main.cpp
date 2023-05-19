@@ -78,7 +78,7 @@ int main()
 	for (int i = 0; i < lista_cliente.size(); i++) 
 	{
 
-	cout << "Ingrese el numero del producto que se quiere llevar: " << endl;
+	cout << endl<< "Ingrese el numero del producto que se quiere llevar: " << endl;
 	int numeroAux= 300;
 	
 		while (numeroAux != 0) 
@@ -86,7 +86,7 @@ int main()
 			cin >> numeroAux;
 			switch (numeroAux)
 			{
-			case 0: cout << "ya elegi mis productos"; break;
+			case 0: cout << "ya elegi mis productos!" << endl; break;
 			case 1: lista_cliente[i]->seleccionar_producto(&Shampoo);
 				break;
 			case 2: lista_cliente[i]->seleccionar_producto(&Desodorante);
@@ -120,7 +120,7 @@ int main()
 			case 16: lista_cliente[i]->seleccionar_producto(&Paracetamol);
 				break;
 			default:
-				cout << "El producto no existe elija otro";
+				cout << "El producto no existe elija otro: ";
 			}
 		}
 

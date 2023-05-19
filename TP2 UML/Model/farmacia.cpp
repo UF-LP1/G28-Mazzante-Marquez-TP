@@ -59,7 +59,7 @@ void farmacia::set_horarioSemana(string h) {
  * @return void
  */
 void farmacia::abrir() {
-    cout << "La farmacia esta abierta" << endl;
+    cout << "~LA FARMACIA ESTA ABIERTA~" << endl;
     return;
 }
 
@@ -67,7 +67,7 @@ void farmacia::abrir() {
  * @return void
  */
 void farmacia::cerrar() {
-    cout << "La farmacia esta cerrada" << endl;
+    cout << "~LA FARMACIA ESTA CERRADA~" << endl;
     return;
 }
 
