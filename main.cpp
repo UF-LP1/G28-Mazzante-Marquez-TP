@@ -26,11 +26,11 @@ int main() {
 
 	miFarmacia.abrir();
 
-	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr, 70.0, efectivo);
-	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0, AppPagoCelular);
+	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr, 7000.0, efectivo);
+	/*cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0, AppPagoCelular);
 	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0, tarjetaDeDebito);
 	cliente cliente4(farmaciaParticular, "carlos", "garcia", "32897665", true, "11786443", "charlygarcia@gmail.com", nullptr, 124528.0, tarjetadecredito);
-
+	*/
 	prodPerfYCosm Shampoo(120.0, 10, "1234", "nivea", champu);
 	prodPerfYCosm Desodorante(450.0, 14, "1235", "axe", desorante);
 	prodPerfYCosm Jabon(260.0, 34, "1236", "dove", jabon);
@@ -74,76 +74,74 @@ int main() {
 	cout << "15 - "; Actron.imprimir_producto();
 	cout << "16 - "; Paracetamol.imprimir_producto();
 	
-	cout << "Ingrese el numero del producto que se quiere llevar" << endl;
-	int numeroAux;
-	cin >> numeroAux;
-
-	switch (numeroAux)
-	{
-		case 0: break;
-		case 1: cliente1.seleccionar_producto(&Shampoo);
-			break;
-		case 2: cliente1.seleccionar_producto(&Desodorante);
-			break;
-		case 3: cliente1.seleccionar_producto(&Jabon);
-			break;
-		case 4: cliente1.seleccionar_producto(&Cremacara);
-			break;
-		case 5: cliente1.seleccionar_producto(&Perfume);
-			break;
-		case 6: cliente1.seleccionar_producto(&Maquillaje);
-			break;
-		case 7: cliente1.seleccionar_producto(&EsmalteUnia);
-			break;
-		case 8: cliente1.seleccionar_producto(&CabestrilloA);
-			break;
-		case 9: cliente1.seleccionar_producto(&VendasElasticas);
-			break;
-		case 10: cliente1.seleccionar_producto(&MediasDeCompresion);
-			break;
-		case 11: cliente1.seleccionar_producto(&Chupetin);
-			break;
-		case 12: cliente1.seleccionar_producto(&Bonobon);
-			break;
-		case 13: cliente1.seleccionar_producto(&Cofler);
-			break;
-		case 14: cliente1.seleccionar_producto(&Ibupirac);
-			break;
-		case 15: cliente1.seleccionar_producto(&Actron);
-			break;
-		case 16: cliente1.seleccionar_producto(&Paracetamol);
-			break;
+	cout << "Ingrese el numero del producto que se quiere llevar: " << endl;
+	int numeroAux= 300;
+	
+	while (numeroAux != 0) {
+		cin >> numeroAux;
+		switch (numeroAux)
+		{
+			case 0: break;
+			case 1: cliente1.seleccionar_producto(&Shampoo);
+				break;
+			case 2: cliente1.seleccionar_producto(&Desodorante);
+				break;
+			case 3: cliente1.seleccionar_producto(&Jabon);
+				break;
+			case 4: cliente1.seleccionar_producto(&Cremacara);
+				break;
+			case 5: cliente1.seleccionar_producto(&Perfume);
+				break;
+			case 6: cliente1.seleccionar_producto(&Maquillaje);
+				break;
+			case 7: cliente1.seleccionar_producto(&EsmalteUnia);
+				break;
+			case 8: cliente1.seleccionar_producto(&CabestrilloA);
+				break;
+			case 9: cliente1.seleccionar_producto(&VendasElasticas);
+				break;
+			case 10: cliente1.seleccionar_producto(&MediasDeCompresion);
+				break;
+			case 11: cliente1.seleccionar_producto(&Chupetin);
+				break;
+			case 12: cliente1.seleccionar_producto(&Bonobon);
+				break;
+			case 13: cliente1.seleccionar_producto(&Cofler);
+				break;
+			case 14: cliente1.seleccionar_producto(&Ibupirac);
+				break;
+			case 15: cliente1.seleccionar_producto(&Actron);
+				break;
+			case 16: cliente1.seleccionar_producto(&Paracetamol);
+				break;
 	default:
 		cout << "El producto no existe elija otro";
 	}
 
-
-
-
-
+	}
 	
-
+/*
 	cliente3.seleccionar_producto(&CabestrilloA);
 	for (int i = 0; i < 20; i++) {
 		cliente4.seleccionar_producto(&Chupetin);
 	}
 	cliente4.seleccionar_producto(&Ibupirac);
 	
-
+*/
 	compra* compra1 = cliente1.get_carrito();
-	compra* compra2 = cliente2.get_carrito();
+/*	compra* compra2 = cliente2.get_carrito();
 	compra* compra3 = cliente3.get_carrito();
 	compra* compra4 = cliente4.get_carrito();
-
+*/
 	compra1->eliminar_producto(&Shampoo);
 
 	queue <cliente> listaClientes;
 
 	listaClientes.push(cliente1);
-	listaClientes.push(cliente2);
+/*	listaClientes.push(cliente2);
 	listaClientes.push(cliente3);
 	listaClientes.push(cliente4);
-
+*/
 	cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
 
 	double montoCompra;
@@ -154,7 +152,7 @@ int main() {
 
 	double montoTotal = 0.0;
 
-	cliente2.ver_carrito();	//prubo el metodo ver carrito
+//	cliente2.ver_carrito();	//prubo el metodo ver carrito
 
 
 
@@ -189,10 +187,10 @@ int main() {
 	miFarmacia.cerrar();
 
 	delete compra1;
-	delete compra2;
+/*	delete compra2;
 	delete compra3;
 	delete compra4;
-
+*/
 	return 0;
 }
 
