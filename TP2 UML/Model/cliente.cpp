@@ -84,7 +84,7 @@ void cliente::ver_carrito() {
     producto* ptr_aux = nullptr;
 
     if (this->get_carrito() != nullptr)
-        cout << endl << "Carrito de: " << this->get_nombre() << endl;
+        cout << endl << "-------Carrito de: " << this->get_nombre() << "--------"<< endl;
 
     for (int i = 0; i < carrito_aux.size(); i++)
     {
@@ -99,6 +99,7 @@ void cliente::ver_carrito() {
         else
             dynamic_cast<prodPerfYCosm*>(ptr_aux)->imprimir_producto();
     }
+    cout << "-------------------------------" << endl;
 
     ptr_aux = nullptr;
     delete ptr_aux;       //no sabemos por que pero nos tira error aca.

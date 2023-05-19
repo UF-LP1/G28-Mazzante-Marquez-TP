@@ -60,7 +60,7 @@ double cajero::cobrar(cliente *clienteAux) {
 
 void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
 
-    cout << "DNI cliente: " << clienteAux.get_DNI() << endl << "Nombre cliente: " << clienteAux.get_nombre()
+    cout << endl<< "DNI cliente: " << clienteAux.get_DNI() << endl << "Nombre cliente: " << clienteAux.get_nombre()
         << endl;
     
     MetDePago metpago = clienteAux.get_pago();

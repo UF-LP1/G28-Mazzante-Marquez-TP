@@ -81,7 +81,7 @@ int main() {
 		cin >> numeroAux;
 		switch (numeroAux)
 		{
-			case 0: break;
+			case 0: cout << "ya elegi mis productos"; break;
 			case 1: cliente1.seleccionar_producto(&Shampoo);
 				break;
 			case 2: cliente1.seleccionar_producto(&Desodorante);
@@ -152,7 +152,7 @@ int main() {
 
 	double montoTotal = 0.0;
 
-//	cliente2.ver_carrito();	//prubo el metodo ver carrito
+	cliente1.ver_carrito();	//prubo el metodo ver carrito
 
 
 
