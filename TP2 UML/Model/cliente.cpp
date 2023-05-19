@@ -79,6 +79,9 @@ compra* cliente::get_carrito() {
 
 void cliente::ver_carrito() {
 
+    if (this->carrito == nullptr)
+        return;
+
     vector <producto*> carrito_aux = carrito->get_productos();
 
     producto* ptr_aux = nullptr;

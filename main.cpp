@@ -20,17 +20,18 @@ unsigned int asistAutomatico::numero_clientes = 0;
 
 void actualizar_stock(compra * Comprita_Aux);
 
-int main() {	
+int main()
+{
 
 	farmacia miFarmacia("8_a_22", "9_a_19", "Mi_Farmacia", "Sarmiento_1853", "112345678", "Mi_farmacia@mifarmacia.com", 1000000);
 
 	miFarmacia.abrir();
 
 	cliente cliente1(Perfumeria, "juan", "perez", "45296117", false, "2324675707", "juanperez@gmail.com", nullptr, 7000.0, efectivo);
-	/*cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0, AppPagoCelular);
+	cliente cliente2(PAMI, "paula", "pecker", "45111888", true, "11333695", "pochipecker@gmail.com", nullptr, 700.0, AppPagoCelular);
 	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0, tarjetaDeDebito);
 	cliente cliente4(farmaciaParticular, "carlos", "garcia", "32897665", true, "11786443", "charlygarcia@gmail.com", nullptr, 124528.0, tarjetadecredito);
-	*/
+	
 	prodPerfYCosm Shampoo(120.0, 10, "1234", "nivea", champu);
 	prodPerfYCosm Desodorante(450.0, 14, "1235", "axe", desorante);
 	prodPerfYCosm Jabon(260.0, 34, "1236", "dove", jabon);
@@ -39,20 +40,19 @@ int main() {
 	prodPerfYCosm Perfume(1005, 30, "1239", "paco", perfume);
 	prodPerfYCosm Maquillaje(980.0, 13, "1240", "mac", maquillaje);
 	prodPerfYCosm EsmalteUnia(780.0, 10, "1241", "mac", esmalteUnia);
-
 	prodOrtopedia CabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
 	prodOrtopedia VendasElasticas(1500.0, 15, "4502", "sanasana", vendasElasticas);
 	prodOrtopedia MediasDeCompresion(2600.0, 23, "1987", "piesAjustados", mediasDeCompresion);
-
 	golosina Chupetin(60.0, 120, "1313", "arcor", 13 / 12 / 2023, "chupaleta");
 	golosina Bonobon(75.0, 50, "1214", "arcor", 1192023, "bonobon");
 	golosina Cofler(450.0, 12, "3333", "arcor", 3112023, "chocolate");
-
 	medicamento Ibupirac(500.0, 50, "4444", "ibupirac", "ibuprofeno", 15 / 9 / 2025);
 	medicamento Actron(400.0, 60, "5484", "actron", "actron", 3182024);
 	medicamento Paracetamol(320.0, 40, "8888", "paracetamol", "paracetamol", 5112025);
 
 	Ibupirac.set_precio(650.0); //pruebo el metodo cambiar precio
+
+	vector <cliente*> lista_cliente{ &cliente1, &cliente2, &cliente3, &cliente4 };
 	
 
 	cout << "-------------PRODUCTOS DISPONIBLES-----------------" << endl << endl;
@@ -74,74 +74,72 @@ int main() {
 	cout << "15 - "; Actron.imprimir_producto();
 	cout << "16 - "; Paracetamol.imprimir_producto();
 	
+
+	for (int i = 0; i < lista_cliente.size(); i++) 
+	{
+
 	cout << "Ingrese el numero del producto que se quiere llevar: " << endl;
 	int numeroAux= 300;
 	
-	while (numeroAux != 0) {
-		cin >> numeroAux;
-		switch (numeroAux)
+		while (numeroAux != 0) 
 		{
+			cin >> numeroAux;
+			switch (numeroAux)
+			{
 			case 0: cout << "ya elegi mis productos"; break;
-			case 1: cliente1.seleccionar_producto(&Shampoo);
+			case 1: lista_cliente[i]->seleccionar_producto(&Shampoo);
 				break;
-			case 2: cliente1.seleccionar_producto(&Desodorante);
+			case 2: lista_cliente[i]->seleccionar_producto(&Desodorante);
 				break;
-			case 3: cliente1.seleccionar_producto(&Jabon);
+			case 3: lista_cliente[i]->seleccionar_producto(&Jabon);
 				break;
-			case 4: cliente1.seleccionar_producto(&Cremacara);
+			case 4: lista_cliente[i]->seleccionar_producto(&Cremacara);
 				break;
-			case 5: cliente1.seleccionar_producto(&Perfume);
+			case 5: lista_cliente[i]->seleccionar_producto(&Perfume);
 				break;
-			case 6: cliente1.seleccionar_producto(&Maquillaje);
+			case 6: lista_cliente[i]->seleccionar_producto(&Maquillaje);
 				break;
-			case 7: cliente1.seleccionar_producto(&EsmalteUnia);
+			case 7: lista_cliente[i]->seleccionar_producto(&EsmalteUnia);
 				break;
-			case 8: cliente1.seleccionar_producto(&CabestrilloA);
+			case 8: lista_cliente[i]->seleccionar_producto(&CabestrilloA);
 				break;
-			case 9: cliente1.seleccionar_producto(&VendasElasticas);
+			case 9: lista_cliente[i]->seleccionar_producto(&VendasElasticas);
 				break;
-			case 10: cliente1.seleccionar_producto(&MediasDeCompresion);
+			case 10: lista_cliente[i]->seleccionar_producto(&MediasDeCompresion);
 				break;
-			case 11: cliente1.seleccionar_producto(&Chupetin);
+			case 11: lista_cliente[i]->seleccionar_producto(&Chupetin);
 				break;
-			case 12: cliente1.seleccionar_producto(&Bonobon);
+			case 12: lista_cliente[i]->seleccionar_producto(&Bonobon);
 				break;
-			case 13: cliente1.seleccionar_producto(&Cofler);
+			case 13: lista_cliente[i]->seleccionar_producto(&Cofler);
 				break;
-			case 14: cliente1.seleccionar_producto(&Ibupirac);
+			case 14: lista_cliente[i]->seleccionar_producto(&Ibupirac);
 				break;
-			case 15: cliente1.seleccionar_producto(&Actron);
+			case 15: lista_cliente[i]->seleccionar_producto(&Actron);
 				break;
-			case 16: cliente1.seleccionar_producto(&Paracetamol);
+			case 16: lista_cliente[i]->seleccionar_producto(&Paracetamol);
 				break;
-	default:
-		cout << "El producto no existe elija otro";
-	}
+			default:
+				cout << "El producto no existe elija otro";
+			}
+		}
 
 	}
 	
-/*
-	cliente3.seleccionar_producto(&CabestrilloA);
-	for (int i = 0; i < 20; i++) {
-		cliente4.seleccionar_producto(&Chupetin);
-	}
-	cliente4.seleccionar_producto(&Ibupirac);
-	
-*/
-	compra* compra1 = cliente1.get_carrito();
-/*	compra* compra2 = cliente2.get_carrito();
-	compra* compra3 = cliente3.get_carrito();
-	compra* compra4 = cliente4.get_carrito();
-*/
+	compra* compra1 = lista_cliente[0]->get_carrito();
+	compra* compra2 = lista_cliente[1]->get_carrito();
+	compra* compra3 = lista_cliente[2]->get_carrito();
+	compra* compra4 = lista_cliente[3]->get_carrito();
+
 	compra1->eliminar_producto(&Shampoo);
 
 	queue <cliente> listaClientes;
 
-	listaClientes.push(cliente1);
-/*	listaClientes.push(cliente2);
-	listaClientes.push(cliente3);
-	listaClientes.push(cliente4);
-*/
+	listaClientes.push(*lista_cliente[0]);
+	listaClientes.push(*lista_cliente[1]);
+	listaClientes.push(*lista_cliente[2]);
+	listaClientes.push(*lista_cliente[3]);
+
 	cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
 
 	double montoCompra;
@@ -187,11 +185,12 @@ int main() {
 	miFarmacia.cerrar();
 
 	delete compra1;
-/*	delete compra2;
+	delete compra2;
 	delete compra3;
 	delete compra4;
-*/
+
 	return 0;
+
 }
 
 
