@@ -31,23 +31,87 @@ int main() {
 	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0, tarjetaDeDebito);
 	cliente cliente4(farmaciaParticular, "carlos", "garcia", "32897665", true, "11786443", "charlygarcia@gmail.com", nullptr, 124528.0, tarjetadecredito);
 
-	prodPerfYCosm shampoo(120.0, 10, "1234", "nivea", champu);
-	prodOrtopedia cabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
-	golosina chupetin(60.0, 120, "1313", "arcor", 13 / 12 / 2023);
-	medicamento ibupirac(500.0, 50, "4444", "ibupirac", "ibuprofeno", 15 / 9 / 2025);
+	prodPerfYCosm Shampoo(120.0, 10, "1234", "nivea", champu);
+	prodPerfYCosm Desodorante(450.0, 14, "1235", "axe", desorante);
+	prodPerfYCosm Jabon(260.0, 34, "1236", "dove", jabon);
+	prodPerfYCosm Cremacuerpo(410.0, 13, "1237", "dove", cremaCuerpo);
+	prodPerfYCosm Cremacara(310.0, 13, "1238", "dove", cremaCara);
+	prodPerfYCosm Perfume(1005, 30, "1239", "paco", perfume);
+	prodPerfYCosm Maquillaje(980.0, 13, "1240", "mac", maquillaje);
+	prodPerfYCosm EsmalteUnia(780.0, 10, "1241", "mac", esmalteUnia);
 
-	ibupirac.set_precio(650.0); //pruebo el metodo cambiar precio
+	prodOrtopedia CabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
+	prodOrtopedia VendasElasticas(1500.0, 15, "4502", "sanasana", vendasElasticas);
+	prodOrtopedia MediasDeCompresion(2600.0, 23, "1987", "piesAjustados", mediasDeCompresion);
 
-	cliente1.seleccionar_producto(&shampoo);
-	cliente1.seleccionar_producto(&shampoo);
-	cliente2.seleccionar_producto(&shampoo);
-	cliente2.seleccionar_producto(&shampoo);
-	cliente2.seleccionar_producto(&cabestrilloA);
-	cliente3.seleccionar_producto(&cabestrilloA);
-	for (int i = 0; i < 20; i++) {
-		cliente4.seleccionar_producto(&chupetin);
+	golosina Chupetin(60.0, 120, "1313", "arcor", 13 / 12 / 2023, "chupaleta");
+	golosina Bonobon(75.0, 50, "1214", "arcor", 1192023, "bonobon");
+	golosina Cofler(450.0, 12, "3333", "arcor", 3112023, "chocolate");
+
+	medicamento Ibupirac(500.0, 50, "4444", "ibupirac", "ibuprofeno", 15 / 9 / 2025);
+	medicamento Actron(400.0, 60, "5484", "actron", "actron", 3182024);
+	medicamento Paracetamol(320.0, 40, "8888", "paracetamol", "paracetamol", 5112025);
+
+	Ibupirac.set_precio(650.0); //pruebo el metodo cambiar precio
+	
+
+	cout << "-------------PRODUCTOS DISPONIBLES-----------------" << endl << endl;
+
+	cout << "1 - "; Shampoo.imprimir_producto();
+	cout << "2 - "; Desodorante.imprimir_producto();
+	cout << "3 - "; Jabon.imprimir_producto();
+	cout << "4- "; Cremacara.imprimir_producto();
+	cout << "5 - "; Perfume.imprimir_producto();
+	cout << "6 - "; Maquillaje.imprimir_producto();
+	cout << "7 - "; EsmalteUnia.imprimir_producto();
+	cout << "8 - "; CabestrilloA.imprimir_producto();
+	cout << "9 - "; VendasElasticas.imprimir_producto();
+	cout << "10 - "; MediasDeCompresion.imprimir_producto();
+	cout << "11 - "; Chupetin.imprimir_producto();
+	cout << "12 - "; Bonobon.imprimir_producto();
+	cout << "13 - "; Cofler.imprimir_producto();
+	cout << "14 - "; Ibupirac.imprimir_producto();
+	cout << "15 - "; Actron.imprimir_producto();
+	cout << "16 - "; Paracetamol.imprimir_producto();
+	
+	cout << "Ingrese el numero del producto que se quiere llevar" << endl;
+	int numeroAux;
+	cin >> numeroAux;
+
+	switch (numeroAux)
+	{
+	default:
+		cout << "El producto no existe elija otro";
 	}
-	cliente4.seleccionar_producto(&ibupirac);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	cliente1.seleccionar_producto(&Shampoo);
+	cliente1.seleccionar_producto(&Shampoo);
+	cliente2.seleccionar_producto(&Shampoo);
+	cliente2.seleccionar_producto(&Shampoo);
+	cliente2.seleccionar_producto(&CabestrilloA);
+	cliente3.seleccionar_producto(&CabestrilloA);
+	for (int i = 0; i < 20; i++) {
+		cliente4.seleccionar_producto(&Chupetin);
+	}
+	cliente4.seleccionar_producto(&Ibupirac);
 	
 
 	compra* compra1 = cliente1.get_carrito();
@@ -55,7 +119,7 @@ int main() {
 	compra* compra3 = cliente3.get_carrito();
 	compra* compra4 = cliente4.get_carrito();
 
-	compra1->eliminar_producto(&shampoo);
+	compra1->eliminar_producto(&Shampoo);
 
 	queue <cliente> listaClientes;
 
@@ -75,6 +139,8 @@ int main() {
 	double montoTotal = 0.0;
 
 	cliente2.ver_carrito();	//prubo el metodo ver carrito
+
+
 
 	compra* comprita_Aux = nullptr;
 
@@ -112,7 +178,6 @@ int main() {
 	delete compra4;
 
 	return 0;
-
 }
 
 
