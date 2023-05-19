@@ -54,6 +54,3 @@ bool eMostrador::aplicarDescuento(cliente c) {  //se pudo haber hecho directamen
 /**
  * @return cliente
  */
-void eMostrador::cargarPago() {
-    return;
-}

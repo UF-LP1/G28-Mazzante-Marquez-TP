@@ -27,7 +27,6 @@ void expenderRecetas();
     
 bool aplicarDescuento(cliente c);
     
-void cargarPago();
 
 };
 

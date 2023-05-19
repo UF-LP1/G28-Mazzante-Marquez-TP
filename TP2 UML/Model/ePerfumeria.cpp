@@ -40,7 +40,3 @@ void ePerfumeria::asesorarCliente() {
 /**
  * @return cliente
  */
-void ePerfumeria::cargarPrecio() {
-    return;
-}
-

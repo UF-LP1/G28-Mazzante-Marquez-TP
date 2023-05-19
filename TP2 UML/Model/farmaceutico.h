@@ -29,8 +29,6 @@ void recomendarRem();
  */
 void llamarCliente(cliente c);
     
-void cargarPrecio();
-
 private: 
     const string numMatricula;
 };

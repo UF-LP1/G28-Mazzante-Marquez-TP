@@ -55,7 +55,4 @@ void farmaceutico::llamarCliente(cliente c) {
 /**
  * @return cliente
  */
-void farmaceutico::cargarPrecio() {
-    return;
-}
 

@@ -25,7 +25,6 @@ void empacarProducto();
  */
 void llamarCliente(cliente c);
     
-void cargarPrecio();
 
 };
 

@@ -25,7 +25,7 @@ void llamarCliente(cliente c);
     
 void asesorarCliente();
     
-void cargarPrecio();
+
 };
 
 #endif //_EPERFUMERIA_H
