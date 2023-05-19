@@ -52,9 +52,10 @@ double cajero::cobrar(cliente *clienteAux) {
    }
 
    if (clienteAux->get_obraSocial())
-       return precioTotal * 0.9;                                             //le hago un 10% de descuento si tiene obra socia
-   else
-       return precioTotal;
+       compraAux1->set_monto(compraAux1->get_monto() * 0.9);
+
+   return compraAux1->get_monto();
+
 }
 
 void cajero::imprimir_factura(cliente clienteAux, double precioTotal) {
