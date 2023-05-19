@@ -30,6 +30,6 @@ time_t medicamento::get_vencimiento() {
 
 void medicamento::imprimir_producto()
 {
-    cout << "Producto -  " << this->nombre << endl;
+    cout << "Producto -  " << this->nombre << ", $"<<this->precio<< endl;
 }
 

@@ -21,11 +21,11 @@ void prodOrtopedia::imprimir_producto()
     cout << "Producto ";
     switch (tipoProducto)
     {
-    case vendasElasticas:  cout << "- " << "Vendas elasticas" << endl;
+    case vendasElasticas:  cout << "- " << "Vendas elasticas" << ", $"<<this->precio<< endl;
         break;
-    case cabestrillos: cout << "- " << "cabestrillos" << endl;
+    case cabestrillos: cout << "- " << "cabestrillos" << ", $"<<this->precio<< endl;
         break;
-    case mediasDeCompresion: cout << "- " << "medias de compresion" << endl;
+    case mediasDeCompresion: cout << "- " << "medias de compresion" <<", $"<<this->precio<< endl;
         break;
     default:
         break;

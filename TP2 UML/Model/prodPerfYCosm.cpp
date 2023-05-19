@@ -30,21 +30,21 @@ void prodPerfYCosm::imprimir_producto()
 
 	switch (tipoProducto)
 	{
-	case champu:cout << "- " << "shampoo" << endl;
+	case champu:cout << "- " << "shampoo" << ", $" << this->precio << endl;
 		break;
-	case desorante: cout << "- " << "desodorante" << endl;
+	case desorante: cout << "- " << "desodorante" << ", $" << this->precio << endl;
 		break;
-	case jabon: cout << "- " << "jabon" << endl;
+	case jabon: cout << "- " << "jabon" << ", $" << this->precio << endl;
 		break;
-	case cremaCuerpo: cout << "- " << "crema cuerpo" << endl;
+	case cremaCuerpo: cout << "- " << "crema cuerpo" << ", $" << this->precio << endl;
 		break;
-	case cremaCara: cout << "- " << "crema cara" << endl;
+	case cremaCara: cout << "- " << "crema cara" << ", $" << this->precio << endl;
 		break;
-	case perfume: cout << "- " << "perfume" << endl;
+	case perfume: cout << "- " << "perfume" << ", $" << this->precio << endl;
 		break;
-	case maquillaje: cout << "- " << "maquillaje" << endl;
+	case maquillaje: cout << "- " << "maquillaje" << ", $" << this->precio << endl;
 		break;
-	case esmalteUnia: cout << "- " << "esmalte unia" << endl;
+	case esmalteUnia: cout << "- " << "esmalte unia" << ", $" << this->precio << endl;
 		break;
 	default:
 		break;

@@ -10,9 +10,10 @@
  * @param string
  * @param time_t
  */
-golosina::golosina(double precio, unsigned int stock, string codigoProd , string marca, time_t vencimiento)
+golosina::golosina(double precio, unsigned int stock, string codigoProd , string marca, time_t vencimiento, string tipo_golosina)
     : producto (precio, stock, codigoProd, marca) {
     this->vencimiento = vencimiento;
+    this->tipo_golosina = tipo_golosina;
 }
 
 //Destructor
@@ -29,7 +30,7 @@ time_t golosina::get_vencimiento() {
 
 void golosina::imprimir_producto()
 {
-    cout << "Producto - " << this->tipo_golosina << endl;
+    cout << "Producto - " << this->tipo_golosina << ", $"<<this->precio<< endl;
 }
 
 
