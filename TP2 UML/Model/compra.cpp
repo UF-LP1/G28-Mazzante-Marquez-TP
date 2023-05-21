@@ -61,6 +61,9 @@ void compra::agregar_producto(producto* p) {
  */
 void compra::eliminar_producto(producto *p) {
 
+    if(monto == 0)  //si el monto es 0 significa que no tiene ningun producto agregado (no le puedo eliminar ningun producto)
+        return;
+
     for (int i = 0; i < listaProductos.size(); i++)
     {
         if (listaProductos[i]->codigoProd == p->codigoProd) {

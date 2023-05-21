@@ -73,7 +73,10 @@ string cliente::get_DNI()
 }
 
 compra* cliente::get_carrito() {
-
+    if (this->carrito == nullptr)
+    {
+        carrito = new compra();
+    }
     return this->carrito;
 }
 

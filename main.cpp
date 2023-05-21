@@ -77,8 +77,8 @@ int main()
 
 	for (int i = 0; i < lista_cliente.size(); i++) 
 	{
-
-	cout << endl<< "Ingrese el numero del producto que se quiere llevar: " << endl;
+	cout << endl << "CLIENTE" << i + 1 << endl;
+	cout << "Ingrese el numero del producto que se quiere llevar o 0 para salir: " << endl;
 	int numeroAux= 300;
 	
 		while (numeroAux != 0) 
@@ -131,6 +131,7 @@ int main()
 	compra* compra3 = lista_cliente[2]->get_carrito();
 	compra* compra4 = lista_cliente[3]->get_carrito();
 
+
 	compra1->eliminar_producto(&Shampoo);
 
 	queue <cliente> listaClientes;
@@ -165,11 +166,13 @@ int main()
 		if (montoCompra != 0.0) {	//chequeo que haya salido todo bien 
 			cajerocobro.imprimir_factura(listaClientes.front(), montoCompra); //imprimo las faccturas de los clientes
 			miFarmacia.agregar_compra(listaClientes.front().get_carrito());
-
+		}
+		else //si el monto es 0 debo agregar los articulos que se iba a llevar el cliente 
+		{
 			comprita_Aux = listaClientes.front().get_carrito();
 			actualizar_stock(comprita_Aux);		//actualizo el stock de los productos que se llevaron
-
 		}
+
 		listaClientes.pop();
 
 	}
@@ -201,7 +204,7 @@ void actualizar_stock(compra * Comprita_Aux) {
 
 	for (int i = 0; i < listaProdAActualizar.size(); i++)
 	{
-		listaProdAActualizar[i]->set_stock(listaProdAActualizar[i]->get_stock() - 1);
+		listaProdAActualizar[i]->set_stock(listaProdAActualizar[i]->get_stock() + 1);
 	}
 
 }
