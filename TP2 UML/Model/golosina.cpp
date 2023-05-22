@@ -10,7 +10,7 @@
  * @param string
  * @param time_t
  */
-golosina::golosina(double precio, unsigned int stock, string codigoProd , string marca, time_t vencimiento, string tipo_golosina)
+golosina::golosina(double precio, unsigned int stock, string codigoProd , string marca, string vencimiento, string tipo_golosina)
     : producto (precio, stock, codigoProd, marca) {
     this->vencimiento = vencimiento;
     this->tipo_golosina = tipo_golosina;
@@ -24,7 +24,7 @@ golosina::~golosina() {
 /**
  * @return time_t
  */
-time_t golosina::get_vencimiento() {
+string golosina::get_vencimiento() {
     return this->vencimiento;
 }
 

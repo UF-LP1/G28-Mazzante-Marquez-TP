@@ -7,16 +7,16 @@
 class medicamento : public producto {
 public:
     const string nombre;
-    time_t vencimiento;
+    string vencimiento;
 
     /**
      * @param string
      * @param time_t
      */
-    medicamento(double, unsigned int, string, string, string, time_t);
+    medicamento(double, unsigned int, string, string, string, string);
     ~medicamento();
 
-    time_t get_vencimiento();
+    string get_vencimiento();
 
     void imprimir_producto();
 };

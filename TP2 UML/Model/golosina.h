@@ -6,18 +6,18 @@
 
 class golosina: public producto {
 public: 
-    time_t vencimiento;
+    string vencimiento;
     string tipo_golosina;
     
 /**
  * @param string
  * @param time_t
  */
-golosina(double, unsigned int, string, string, time_t, string);
+golosina(double, unsigned int, string, string, string, string);
     
 ~golosina();
 
-time_t get_vencimiento();
+string get_vencimiento();
 
 void imprimir_producto();
 

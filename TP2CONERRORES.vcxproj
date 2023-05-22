@@ -24,6 +24,7 @@
     <ProjectGuid>{bfc5fce8-9174-477d-bb79-c956e1c7106a}</ProjectGuid>
     <RootNamespace>TP2CONERRORES</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TP 3 MARQUEZ MAZZANTE</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
