@@ -43,19 +43,22 @@ int main()
 	prodOrtopedia CabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
 	prodOrtopedia VendasElasticas(1500.0, 15, "4502", "sanasana", vendasElasticas);
 	prodOrtopedia MediasDeCompresion(2600.0, 23, "1987", "piesAjustados", mediasDeCompresion);
-	golosina Chupetin(60.0, 120, "1313", "arcor", 13 / 12 / 2023, "chupaleta");
-	golosina Bonobon(75.0, 50, "1214", "arcor", 1192023, "bonobon");
-	golosina Cofler(450.0, 12, "3333", "arcor", 3112023, "chocolate");
-	medicamento Ibupirac(500.0, 50, "4444", "ibupirac", "ibuprofeno", 15 / 9 / 2025);
-	medicamento Actron(400.0, 60, "5484", "actron", "actron", 3182024);
-	medicamento Paracetamol(320.0, 40, "8888", "paracetamol", "paracetamol", 5112025);
+	golosina Chupetin(60.0, 120, "1313", "arcor", 13/12/2023, "chupaleta");
+	golosina Bonobon(75.0, 50, "1214", "arcor", 11/9/2023, "bonobon");
+	golosina Cofler(450.0, 12, "3333", "arcor", 31/1/2023, "chocolate");
+	medicamento Ibupirac(500.0, 50, "4444", "ibupirac", "ibuprofeno", 15/9/2025);
+	medicamento Actron(400.0, 60, "5484", "actron", "actron", 31/8/2024);
+	medicamento Paracetamol(320.0, 40, "8888", "paracetamol", "paracetamol", 5/11/2025);
+
 
 	Ibupirac.set_precio(650.0); //pruebo el metodo cambiar precio
+
 
 	vector <cliente*> lista_cliente{ &cliente1, &cliente2, &cliente3, &cliente4 };
 
 	vector <producto*> listaProductos{ &Shampoo, &Desodorante, &Jabon, &Cremacuerpo, &Cremacara, &Perfume, &Maquillaje, &EsmalteUnia, &CabestrilloA, &VendasElasticas,
 								   &MediasDeCompresion, &Chupetin, &Bonobon, &Cofler, &Ibupirac, &Actron, &Paracetamol };
+
 
 	cout << endl << "-------------PRODUCTOS DISPONIBLES-----------------" << endl << endl;
 
@@ -76,11 +79,9 @@ int main()
 			if (n > listaProductos.size() || n < 0) {
 				cout << "no existe tal producto, ingrese otro: ";
 				cin >> n;
-			}
-		
+			}	
 			lista_cliente[i]->seleccionar_producto(listaProductos[n-1]);
 		}
-		
 	}
 		
 	compra* compra1 = lista_cliente[0]->get_carrito();
@@ -149,7 +150,6 @@ int main()
 	delete compra4;
 
 	return 0;
-
 }
 
 

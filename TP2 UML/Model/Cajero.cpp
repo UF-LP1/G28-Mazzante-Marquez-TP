@@ -44,10 +44,10 @@ double cajero::cobrar(cliente *clienteAux) {
    try {
        float pago = clienteAux->get_billetera() - precioTotal;
         clienteAux->pagar(pago);
-       if (pago < 0.0) throw exception();
+       if (pago < 0.0) throw exception(" no cuenta con suficiente dinero");
    }
    catch (exception& nohayplata) {
-       cout << endl << "el cliente " << clienteAux->get_nombre()<<" no cuenta con suficiente dinero"<< endl << endl;
+       cout << "El cliente " << clienteAux->get_nombre() << nohayplata.what() << endl << endl;
        return 0;
    }
 
