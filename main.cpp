@@ -57,7 +57,7 @@ int main()
 	vector <producto*> listaProductos{ &Shampoo, &Desodorante, &Jabon, &Cremacuerpo, &Cremacara, &Perfume, &Maquillaje, &EsmalteUnia, &CabestrilloA, &VendasElasticas,
 								   &MediasDeCompresion, &Chupetin, &Bonobon, &Cofler, &Ibupirac, &Actron, &Paracetamol };
 
-	cout << "-------------PRODUCTOS DISPONIBLES-----------------" << endl << endl;
+	cout << endl << "-------------PRODUCTOS DISPONIBLES-----------------" << endl << endl;
 
 	for (int i = 0; i < listaProductos.size(); i++) {
 
