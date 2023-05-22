@@ -40,15 +40,15 @@ int main()
 	prodPerfYCosm Perfume(1005, 30, "1239", "paco", perfume);
 	prodPerfYCosm Maquillaje(980.0, 13, "1240", "mac", maquillaje);
 	prodPerfYCosm EsmalteUnia(780.0, 10, "1241", "mac", esmalteUnia);
-	prodOrtopedia CabestrilloA(350.0, 30, "1322", "piesfelices", cabestrillos);
-	prodOrtopedia VendasElasticas(1500.0, 15, "4502", "sanasana", vendasElasticas);
-	prodOrtopedia MediasDeCompresion(2600.0, 23, "1987", "piesAjustados", mediasDeCompresion);
-	golosina Chupetin(60.0, 120, "1313", "arcor", "13/12/2023", "chupaleta");
-	golosina Bonobon(75.0, 50, "1214", "arcor", "11/9/2023", "bonobon");
-	golosina Cofler(450.0, 12, "3333", "arcor", "31/1/2023", "chocolate");
-	medicamento Ibupirac(500.0, 50, "4444", "ibupirac", "ibuprofeno", "15/9/2025");
-	medicamento Actron(400.0, 60, "5484", "actron", "actron", "31/8/2024");
-	medicamento Paracetamol(320.0, 40, "8888", "paracetamol", "paracetamol", "5/11/2025");
+	prodOrtopedia CabestrilloA(350.0, 30, "1242", "piesfelices", cabestrillos);
+	prodOrtopedia VendasElasticas(1500.0, 15, "1243", "sanasana", vendasElasticas);
+	prodOrtopedia MediasDeCompresion(2600.0, 23, "1244", "piesAjustados", mediasDeCompresion);
+	golosina Chupetin(60.0, 120, "1245", "arcor", "13/12/2023", "chupaleta");
+	golosina Bonobon(75.0, 50, "1246", "arcor", "11/9/2023", "bonobon");
+	golosina Cofler(450.0, 12, "1247", "arcor", "31/1/2023", "chocolate");
+	medicamento Ibupirac(500.0, 50, "1248", "ibupirac", "ibuprofeno", "15/9/2025");
+	medicamento Actron(400.0, 60, "1249", "actron", "actron", "31/8/2024");
+	medicamento Paracetamol(320.0, 40, "1250", "paracetamol", "paracetamol", "5/11/2025");
 
 
 	Ibupirac.set_precio(650.0); //pruebo el metodo cambiar precio
