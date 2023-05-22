@@ -53,28 +53,12 @@ int main()
 	Ibupirac.set_precio(650.0); //pruebo el metodo cambiar precio
 
 	vector <cliente*> lista_cliente{ &cliente1, &cliente2, &cliente3, &cliente4 };
-	vector<producto*> listaProductos{ &Shampoo, &Desodorante, &Jabon, &Cremacuerpo, &Cremacara, &Perfume, &Maquillaje, &EsmalteUnia, &CabestrilloA, &VendasElasticas,
+
+	vector <producto*> listaProductos{ &Shampoo, &Desodorante, &Jabon, &Cremacuerpo, &Cremacara, &Perfume, &Maquillaje, &EsmalteUnia, &CabestrilloA, &VendasElasticas,
 								   &MediasDeCompresion, &Chupetin, &Bonobon, &Cofler, &Ibupirac, &Actron, &Paracetamol };
 
 	cout << "-------------PRODUCTOS DISPONIBLES-----------------" << endl << endl;
 
-	/*cout << "1 - "; Shampoo.imprimir_producto();
-	cout << "2 - "; Desodorante.imprimir_producto();
-	cout << "3 - "; Jabon.imprimir_producto();
-	cout << "4- "; Cremacara.imprimir_producto();
-	cout << "5 - "; Perfume.imprimir_producto();
-	cout << "6 - "; Maquillaje.imprimir_producto();
-	cout << "7 - "; EsmalteUnia.imprimir_producto();
-	cout << "8 - "; CabestrilloA.imprimir_producto();
-	cout << "9 - "; VendasElasticas.imprimir_producto();
-	cout << "10 - "; MediasDeCompresion.imprimir_producto();
-	cout << "11 - "; Chupetin.imprimir_producto();
-	cout << "12 - "; Bonobon.imprimir_producto();
-	cout << "13 - "; Cofler.imprimir_producto();
-	cout << "14 - "; Ibupirac.imprimir_producto();
-	cout << "15 - "; Actron.imprimir_producto();
-	cout << "16 - "; Paracetamol.imprimir_producto();
-	*/
 	for (int i = 0; i < listaProductos.size(); i++) {
 
 		cout << i + 1 << "- ";
@@ -85,6 +69,7 @@ int main()
 	{	int n=1;
 		cout << endl << "CLIENTE " << i + 1 << endl;
 		cout << "Ingrese el numero del producto que se quiere llevar o 0 para salir: " << endl;
+
 		while (n != 0) {
 			cin >> n;
 			if (n == 0) break;
@@ -96,123 +81,76 @@ int main()
 			lista_cliente[i]->seleccionar_producto(listaProductos[n-1]);
 		}
 		
-
-/*		int numeroAux = 300;
-
-			while (numeroAux != 0)
-			{
-				cin >> numeroAux;
-				switch (numeroAux)
-				{
-				case 0: cout << "ya elegi mis productos!" << endl; break;
-				case 1: lista_cliente[i]->seleccionar_producto(&Shampoo);
-					break;
-				case 2: lista_cliente[i]->seleccionar_producto(&Desodorante);
-					break;
-				case 3: lista_cliente[i]->seleccionar_producto(&Jabon);
-					break;
-				case 4: lista_cliente[i]->seleccionar_producto(&Cremacara);
-					break;
-				case 5: lista_cliente[i]->seleccionar_producto(&Perfume);
-					break;
-				case 6: lista_cliente[i]->seleccionar_producto(&Maquillaje);
-					break;
-				case 7: lista_cliente[i]->seleccionar_producto(&EsmalteUnia);
-					break;
-				case 8: lista_cliente[i]->seleccionar_producto(&CabestrilloA);
-					break;
-				case 9: lista_cliente[i]->seleccionar_producto(&VendasElasticas);
-					break;
-				case 10: lista_cliente[i]->seleccionar_producto(&MediasDeCompresion);
-					break;
-				case 11: lista_cliente[i]->seleccionar_producto(&Chupetin);
-					break;
-				case 12: lista_cliente[i]->seleccionar_producto(&Bonobon);
-					break;
-				case 13: lista_cliente[i]->seleccionar_producto(&Cofler);
-					break;
-				case 14: lista_cliente[i]->seleccionar_producto(&Ibupirac);
-					break;
-				case 15: lista_cliente[i]->seleccionar_producto(&Actron);
-					break;
-				case 16: lista_cliente[i]->seleccionar_producto(&Paracetamol);
-					break;
-				default:
-					cout << "El producto no existe elija otro: ";
-				}
-			}
-			*/
-		}
-		
-		compra* compra1 = lista_cliente[0]->get_carrito();
-		compra* compra2 = lista_cliente[1]->get_carrito();
-		compra* compra3 = lista_cliente[2]->get_carrito();
-		compra* compra4 = lista_cliente[3]->get_carrito();
-
-
-		compra1->eliminar_producto(&Shampoo);
-
-		queue <cliente> listaClientes;
-
-		listaClientes.push(*lista_cliente[0]);
-		listaClientes.push(*lista_cliente[1]);
-		listaClientes.push(*lista_cliente[2]);
-		listaClientes.push(*lista_cliente[3]);
-
-		cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
-
-		double montoCompra;
-
-		unsigned int tamanioCola;
-		tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
-		//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
-
-		double montoTotal = 0.0;
-
-		cliente1.ver_carrito();	//prubo el metodo ver carrito
-
-
-
-		compra* comprita_Aux = nullptr;
-
-		for (unsigned int i = 0; i < tamanioCola; i++) {
-
-			montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
-
-			montoTotal += montoCompra;
-
-			if (montoCompra != 0.0) {	//chequeo que haya salido todo bien 
-				cajerocobro.imprimir_factura(listaClientes.front(), montoCompra); //imprimo las faccturas de los clientes
-				miFarmacia.agregar_compra(listaClientes.front().get_carrito());
-			}
-			else //si el monto es 0 debo agregar los articulos que se iba a llevar el cliente 
-			{
-				comprita_Aux = listaClientes.front().get_carrito();
-				actualizar_stock(comprita_Aux);		//actualizo el stock de los productos que se llevaron
-			}
-
-			listaClientes.pop();
-
-		}
-		comprita_Aux = nullptr;
-		delete comprita_Aux;
-
-		unsigned int num_total_clientes = asistAutomatico::get_numero();
-
-		cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl << endl;
-
-		miFarmacia.set_fondos(miFarmacia.get_fondos() + (long int)montoTotal);	//estariamos perdiendo los decimales pero en comparación con el resto de los fondos lo tomamos como despreciable
-
-		miFarmacia.cerrar();
-
-		delete compra1;
-		delete compra2;
-		delete compra3;
-		delete compra4;
-
-		return 0;
-
 	}
+		
+	compra* compra1 = lista_cliente[0]->get_carrito();
+	compra* compra2 = lista_cliente[1]->get_carrito();
+	compra* compra3 = lista_cliente[2]->get_carrito();
+	compra* compra4 = lista_cliente[3]->get_carrito();
+
+
+	compra1->eliminar_producto(&Shampoo);	// pruebo el metodo eliminar producto con shampoo (si no se lleva un shampoo no hara nada)
+
+	queue <cliente> listaClientes;
+
+	listaClientes.push(*lista_cliente[0]);
+	listaClientes.push(*lista_cliente[1]);
+	listaClientes.push(*lista_cliente[2]);
+	listaClientes.push(*lista_cliente[3]);
+
+	cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
+
+	double montoCompra;
+
+	unsigned int tamanioCola;
+	tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
+										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
+
+	double montoTotal = 0.0;
+
+	cliente1.ver_carrito();	//prubo el metodo ver carrito
+
+
+
+	compra* comprita_Aux = nullptr;
+
+	for (unsigned int i = 0; i < tamanioCola; i++) {
+
+		montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
+
+		montoTotal += montoCompra;
+
+		if (montoCompra != 0.0) {	//chequeo que haya salido todo bien 
+			cajerocobro.imprimir_factura(listaClientes.front(), montoCompra); //imprimo las faccturas de los clientes
+			miFarmacia.agregar_compra(listaClientes.front().get_carrito());
+		}
+		else //si el monto es 0 debo agregar los articulos que se iba a llevar el cliente 
+		{
+			comprita_Aux = listaClientes.front().get_carrito();
+			actualizar_stock(comprita_Aux);		//actualizo el stock de los productos que se llevaron
+		}
+
+		listaClientes.pop();
+	}
+		
+	comprita_Aux = nullptr;
+	delete comprita_Aux;
+
+	unsigned int num_total_clientes = asistAutomatico::get_numero();
+
+	cout << "La cantidad de clientes atendidos fue: " << num_total_clientes << endl << endl;
+
+	miFarmacia.set_fondos(miFarmacia.get_fondos() + (long int)montoTotal);	//estariamos perdiendo los decimales pero en comparación con el resto de los fondos lo tomamos como despreciable
+	miFarmacia.cerrar();
+
+	delete compra1;
+	delete compra2;
+	delete compra3;
+	delete compra4;
+
+	return 0;
+
+}
 
 
 
