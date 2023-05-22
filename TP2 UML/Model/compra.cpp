@@ -47,7 +47,13 @@ double compra::get_monto() {
  * @return void
  */
 void compra::agregar_producto(producto* p) {
-
+    
+    if (p->get_stock() == 0) {
+        cout << "no hay mas stock de ese producto, puede seleccionar otro: "<<endl;
+        return;
+    }
+    p->set_stock(p->get_stock() - 1);
+    
     listaProductos.push_back(p);
 
     monto += p->precio;

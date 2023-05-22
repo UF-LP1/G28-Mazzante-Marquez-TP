@@ -32,7 +32,7 @@ int main()
 	cliente cliente3(Ortopedia, "agostina", "nobo", "45862174", false, "55896224", "agosnobo@gmail.com", nullptr, 6340.0, tarjetaDeDebito);
 	cliente cliente4(farmaciaParticular, "carlos", "garcia", "32897665", true, "11786443", "charlygarcia@gmail.com", nullptr, 124528.0, tarjetadecredito);
 
-	prodPerfYCosm Shampoo(120.0, 10, "1234", "nivea", champu);
+	prodPerfYCosm Shampoo(120.0, 3, "1234", "nivea", champu);
 	prodPerfYCosm Desodorante(450.0, 14, "1235", "axe", desorante);
 	prodPerfYCosm Jabon(260.0, 34, "1236", "dove", jabon);
 	prodPerfYCosm Cremacuerpo(410.0, 13, "1237", "dove", cremaCuerpo);
