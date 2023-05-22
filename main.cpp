@@ -92,19 +92,19 @@ int main()
 
 	compra1->eliminar_producto(&Shampoo);	// pruebo el metodo eliminar producto con shampoo (si no se lleva un shampoo no hara nada)
 
-	queue <cliente> listaClientes;
+	queue <cliente> queueClientes;
 
-	listaClientes.push(*lista_cliente[0]);
-	listaClientes.push(*lista_cliente[1]);
-	listaClientes.push(*lista_cliente[2]);
-	listaClientes.push(*lista_cliente[3]);
+	queueClientes.push(*lista_cliente[0]);
+	queueClientes.push(*lista_cliente[1]);
+	queueClientes.push(*lista_cliente[2]);
+	queueClientes.push(*lista_cliente[3]);
 
 	cajero cajerocobro("lorenzo", "mazzante", "45296555", "2324684512", 120000);
 
 	double montoCompra;
 
 	unsigned int tamanioCola;
-	tamanioCola = listaClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
+	tamanioCola = queueClientes.size(); //me guardo el tamanio de la cola. nos sale un warning de posible perdida de informacion porque .size 
 										//devuelve un size_t pero como solo uso este dato para recorrer el for no habria ningun problema.
 
 	double montoTotal = 0.0;
@@ -117,21 +117,21 @@ int main()
 
 	for (unsigned int i = 0; i < tamanioCola; i++) {
 
-		montoCompra = cajerocobro.cobrar(&listaClientes.front()); //le cobro a los clientes
+		montoCompra = cajerocobro.cobrar(&queueClientes.front()); //le cobro a los clientes
 
 		montoTotal += montoCompra;
 
 		if (montoCompra != 0.0) {	//chequeo que haya salido todo bien 
-			cajerocobro.imprimir_factura(listaClientes.front(), montoCompra); //imprimo las faccturas de los clientes
-			miFarmacia.agregar_compra(listaClientes.front().get_carrito());
+			cajerocobro.imprimir_factura(queueClientes.front(), montoCompra); //imprimo las faccturas de los clientes
+			miFarmacia.agregar_compra(queueClientes.front().get_carrito());
 		}
 		else //si el monto es 0 debo agregar los articulos que se iba a llevar el cliente 
 		{
-			comprita_Aux = listaClientes.front().get_carrito();
+			comprita_Aux = queueClientes.front().get_carrito();
 			actualizar_stock(comprita_Aux);		//actualizo el stock de los productos que se llevaron
 		}
 
-		listaClientes.pop();
+		queueClientes.pop();
 	}
 		
 	comprita_Aux = nullptr;
