@@ -75,11 +75,12 @@ int main()
 
 		while (n != 0) {
 			cin >> n;
-			if (n == 0) break;
+			
 			if (n > listaProductos.size() || n < 0) {
 				cout << "no existe tal producto, ingrese otro: ";
 				cin >> n;
-			}	
+			}
+				if (n == 0) break;
 			lista_cliente[i]->seleccionar_producto(listaProductos[n-1]);
 		}
 	}
